@@ -3,7 +3,7 @@
 국가AI·ST정책연구센터가 과기정통부 인공지능혁신과에 보내는 **AI for Science 일간 동향**의
 공개 열람면입니다.
 
-**https://kist-aix.github.io/ai-st-policy/**
+**https://ai4s.day/**
 
 ## 무엇이 실리나
 
