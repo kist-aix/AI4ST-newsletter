@@ -2,16 +2,16 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="국가AI·ST정책연구센터가 과기정통부 과학기술인공지능혁신과에 보내는 AI for Science 일간 동향. 확인된 사실과 원문만 싣습니다.">
-<meta property="og:site_name" content="국가AI·ST정책연구센터">
-<meta property="og:title" content="AI for Science 데일리">
-<meta property="og:description" content="AI for Science 일간 동향 · 확인된 사실과 원문 링크만. 국가AI·ST정책연구센터.">
+<meta name="description" content="AI+S&T정책센터가 과기정통부 과학기술인공지능혁신과에 보내는 AI for Science 일간 동향. 확인된 사실과 원문만 싣습니다.">
+<meta property="og:site_name" content="AI+S&T정책센터">
+<meta property="og:title" content="AI for Science Daily">
+<meta property="og:description" content="AI for Science 일간 동향 · 확인된 사실과 원문 링크만. AI+S&T정책센터.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI4S 데일리 2026-09-03</title>
-<!-- 자립형 배포본 · 2026-09-03 08:37 생성 · 더블클릭하면 열립니다 -->
+<title>AI for Science Daily 2026-09-04</title>
+<!-- 자립형 배포본 · 2026-09-04 07:51 생성 · 더블클릭하면 열립니다 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
@@ -159,6 +159,11 @@ table.pool input[type=checkbox]{width:16px; height:16px; accent-color:var(--acce
 .sc b{font-size:13.5px; color:var(--accent)}
 .ttl{font-weight:500; line-height:1.5}
 .src{font-size:11.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace}
+/* 검증 경위 — 내부 후보풀 화면에만 나온다(2026-09-04). 무엇을 확보하지 못했는지를
+   승인 전에 보이게 하되, 제목보다 뒤로 물러서게 해서 사실과 섞이지 않게 한다. */
+.vnote{margin-top:5px; font-size:11.5px; line-height:1.55; color:var(--muted);
+  border-left:2px solid var(--line); padding:3px 0 3px 8px}
+.vnote .lbl{display:inline-block; margin-right:6px; font-weight:600; color:var(--warn,#a15c00)}
 .pw{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:600;
   padding:1px 5px; border-radius:2px; background:var(--gov); color:var(--pw-ink);
   margin-right:5px; vertical-align:1px}
@@ -314,8 +319,9 @@ ul.watch li{padding:8px 0; border-bottom:1px solid var(--line2);
 ul.watch li:last-child{border-bottom:none}
 ul.watch .dd{flex:0 0 auto}
 
-</style>
-<style>
+/* ── 지면 서식 (뉴스레터 면 · 내부 미리보기가 함께 쓴다) ─────────
+   뉴스레터 면에만 두면 관리용 후보풀 화면의 미리보기가 다른 모습으로
+   그려진다. 담당자가 화면에서 본 것과 배포되는 지면은 같아야 한다. */
   /* 공유용 전용 — 결과 중심 배치. 해석·판단근거는 싣지 않는다. */
   .fact{border-left:3px solid var(--line); padding:10px 0 10px 14px; margin:0 0 2px}
   .fact + .fact{border-top:1px solid var(--line2)}
@@ -358,6 +364,19 @@ ul.watch .dd{flex:0 0 auto}
   .secblk[data-sec="5"] .fact{border-left-color:var(--s5)}
   .secblk[data-sec="6"] .fact{border-left-color:var(--s6)}
   .secblk[data-sec="7"] .fact{border-left-color:var(--s7)}
+/* ── 당일 미리보기 (내부 후보풀 화면) ─────────────────────────
+   체크하는 즉시 배포될 지면이 이 안에 그려진다. 테두리를 둘러 '지면'과
+   '작업 화면'을 눈으로 가른다 — 안쪽은 밖으로 나가는 것이다. */
+.preview{border:1px solid var(--line); background:var(--surface);
+  padding:16px 18px 6px; margin:12px 0 0}
+.preview .toolbar{margin-top:0}
+pre.cmd{margin:8px 0 0; padding:10px 12px; overflow-x:auto; white-space:pre-wrap;
+  word-break:break-all; background:var(--surface2); border:1px solid var(--line);
+  font-family:'IBM Plex Mono','D2Coding',monospace; font-size:11.5px;
+  line-height:1.7; color:var(--ink2)}
+
+</style>
+<style>
   details.raw{margin:22px 0 0; border:1px solid var(--line); background:var(--surface2)}
   details.raw summary{padding:9px 12px; cursor:pointer; font-size:13px; color:var(--muted)}
   details.raw pre{margin:0; padding:0 12px 12px; white-space:pre-wrap;
@@ -492,6 +511,67 @@ window.AI4S = window.AI4S || {};
     }).join('') + '</ul>';
   };
 
+  /* ── 지면 렌더 (공유용 면 · 내부 미리보기가 함께 쓴다) ────────────────
+     newsletter.html 안에만 두면 pool.html 의 미리보기가 다른 서식으로 그려진다.
+     담당자가 체크하며 보는 화면과 실제로 배포되는 지면은 같아야 한다 —
+     A.buildEdition 이 카톡 발송본에 대해 지는 약속과 같은 약속이다. */
+  A.mark = function (s, q) {
+    var e = A.esc(s || '');
+    if (!q) return e;
+    try {
+      return e.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'),
+                       '<mark>$1</mark>');
+    } catch (err) { return e; }
+  };
+
+  /* 공유용 게재 여부. 적재할 때 items[].pub 로 굳히는 판단을 화면이 미리 보여 준다.
+     **scripts/adopt.py 의 share_pub() 과 판정이 같아야 한다** — 다르면 담당자가 본
+     미리보기와 실제로 배포된 지면이 갈린다. 네 가지는 공유용에서 뺀다:
+     부재 확인('…없음'), 미확인 수치, S4 전망, **발표일이 게재 창 밖인 것**.
+     빼는 것이지 지우는 것이 아니다 — 카톡 발송본과 내부 화면은 그대로 다 진다.
+     win 은 [시작일, 끝일] 이며 주지 않으면 발표일을 보지 않는다. */
+  A.sharePub = function (x, win) {
+    var t = String(x.t || '');
+    var k = String(x.k || x.body || '');
+    var g = x.grade || x.s || '';
+    if (/없음|미개설|미발표|미공개|부재/.test(t)) return false;
+    if (/미확인|미제시|자체 평가|추정/.test(k)) return false;
+    if (g === 'S4') return false;
+    if (win && win.length === 2) {
+      var pd = x.pd || '';
+      if (!pd || pd < win[0] || pd > win[1]) return false;
+    }
+    return true;
+  };
+
+  /* 항목 하나를 사실 단위로 그린다.
+     제목 = 주체와 사실 / 아래 줄 = 핵심요약과 수치 / 끝 = 발표일·출처·원문 링크.
+     **신호강도(S1~S4)는 그리지 않는다** — 내부 관리용 표시다(2026-09-03 지시).
+     해석과 판단근거(韓 연계)도 여기 싣지 않는다. */
+  A.factHTML = function (x, q) {
+    var body = x.k || x.body || '';
+    var h = '<div class="fact">'
+      + '<div class="ft">' + A.mark(x.t, q) + '</div>'
+      + (body ? '<div class="fk">' + A.mark(body, q) + '</div>' : '')
+      + '<div class="fm">' + A.pubMeta(x);
+    if (x.src) { h += '<span class="chip">' + A.esc(x.src) + '</span>'; }
+    if (x.date) { h += '<span class="chip">' + A.esc(A.fmtDate(x.date)) + ' 발행</span>'; }
+    return h + '</div></div>';
+  };
+
+  /* 섹션 1~7 순서로 묶는다. 항목이 없는 섹션은 내보내지 않는다. */
+  A.sectionsHTML = function (items, q) {
+    var h = '';
+    A.SECTIONS.forEach(function (name, si) {
+      var its = (items || []).filter(function (x) { return x.sec === si + 1; });
+      if (!its.length) return;
+      h += '<div class="secblk" data-sec="' + (si + 1) + '"><h3>' + A.esc(name) + '</h3>';
+      its.forEach(function (x) { h += A.factHTML(x, q); });
+      h += '</div>';
+    });
+    return h;
+  };
+
   /* 발표일·원문 표기. 검색엔진이 몇 달 지난 자료를 오늘 것처럼 올려 주므로
      담당자가 승인 전에 날짜를 눈으로 확인할 수 있어야 한다.
      pd 가 비어 있으면 그 사실을 감추지 말고 '발표일 미확인' 으로 드러낸다. */
@@ -536,10 +616,15 @@ window.AI4S = window.AI4S || {};
       var cur = it.href === opts.here ? ' aria-current="page"' : '';
       return '<a href="' + it.href + '"' + cur + '><span class="n">' + it.n + '</span>' + it.label + '</a>';
     }).join('');
+    /* 머리글 첫 줄은 **발행처 · 수신처** 두 조각이다 (2026-09-03 재지시).
+       누가 내고 누구에게 가는 지면인지가 첫 줄에서 끝나야 한다.
+       셋째 줄에서는 수신처를 빼 둔 상태다 — 같은 이름을 두 줄에 되풀이하지 않는다.
+       opts.eyebrow 로 덮어쓸 수 있다. */
+    var eyebrow = opts.eyebrow != null ? opts.eyebrow
+      : (c.publisher || '(발행처 미정)') + ' · ' + (c.audience || '');
     return '<div class="top">'
       + '<div class="grow">'
-      + '<p class="eyebrow">' + A.esc(c.publisher || '(발행처 미정)')
-      + ' · ' + A.esc(c.audience || '과기정통부 과학기술인공지능혁신과') + '</p>'
+      + '<p class="eyebrow">' + A.esc(eyebrow) + '</p>'
       + '<h1>' + A.esc(opts.title) + '</h1>'
       + '<p class="subline">' + A.esc(opts.sub || '') + '</p>'
       + '</div>'
@@ -597,8 +682,8 @@ window.AI4S = window.AI4S || {};
 <script>
 window.AI4S = window.AI4S || {};
 /* 배포본 — 공유 가능한 필드만 담았다. 원본은 site/data/ 에 있다. */
-window.AI4S.config = {"publisher": "국가AI·ST정책연구센터", "audience": "과기정통부 과학기술인공지능혁신과", "title": "AI4S 데일리", "publishAt": "평일 08:30"};
-window.AI4S.editions = [{"date": "2026-09-03", "items": [{"sec": 1, "t": "KISTEP, 美 OSTP 「국가안보과학기술전략(NSSTS)」 분석 브리프를 발간하고 연구보안·데이터이전 통제 강화가 韓에 미칠 영향을 정리", "k": "NSSTS 2026.8.17 수립 / 연방 연구자금 수혜 개인·기관 추적체계 / 수출·데이터이전 통제 강화 / 「인공지능 및 자율성」 항목 통합", "src": "KISTEP 브리프 9.2", "pd": "2026-09-02", "url": "https://www.kistep.re.kr/board.es?mid=a10306000000&bid=0031&list_no=94846&act=view", "grade": "S1"}, {"sec": 2, "t": "ETRI, 보유 AI 컴퓨팅 인프라를 연구계와 공유하고자 원내 GPU Private Cloud 를 운영하며 「국가초고성능컴퓨팅전문센터」 지정과 출연연 GPU 공동활용 기반 구축을 추진한다고 발표", "k": "원내 GPU Private Cloud 운영 / 국가초고성능컴퓨팅전문센터 지정 추진 / AIDC 로드맵 2027~2032 / 광 I/O 칩렛 12.8Tbps(2031)", "src": "ETRI 보도자료 9.1 (첨부 HWP 전문)", "pd": "2026-09-01", "url": "https://www.etri.re.kr/kor/bbs/view.etri?b_board_id=ETRI06&b_idx=19797", "grade": "S1"}, {"sec": 4, "t": "中 중산대·칭화대 선전 국제대학원 연구팀, 실험 결과로 인과모형 가설군을 진화시키는 과학 에이전트 EvoSCM 을 공개", "k": "구조적 인과모형 가설군을 실험 증거로 진화 / DiscoverPhysics 벤치마크 / 제1기관 중산대 · 미동료심사 프리프린트", "src": "중산대 등 arXiv 9.1", "pd": "2026-09-01", "url": "https://arxiv.org/abs/2609.01526", "grade": "S3"}]}, {"date": "2026-09-02", "items": [{"sec": 1, "t": "美 브룩헤이븐국립연구소, 제네시스 미션 Phase II 공모로 1,420만 달러 규모 전력망 파운데이션 모델 과제 주관", "k": "$14.2M(약 200억 원)·3년 / 24시간에 전력망 시나리오 10억 건 모의 목표 / PI 헨드릭 하만(브룩헤이븐 수석 AI 과학자) / MIT·IBM 리서치·엔비디아·MS·AWS·전력회사 참여 / GridFM 오픈소스는 리눅스재단 에너지가 관리 / 첫 Phase II 프로메테우스는 $60M(약 830억 원)로 산정 상단의 4배", "src": "보도 9.1", "pd": "2026-09-01", "url": "https://www.hpcwire.com/off-the-wire/brookhaven-lab-to-lead-14m-ai-project-for-nations-electric-grid/", "grade": "S3"}, {"sec": 2, "t": "美 NSF, 국가 AI 연구자원(NAIRR) 운영센터를 샌디에이고 슈퍼컴퓨터센터 주관으로 설립", "k": "5년 $35M(약 490억 원) 협력협약 / UC샌디에이고 SDSC 주관, 텍사스대 오스틴 TACC 협력 / 총괄 프랭크 뷔르트바인 SDSC 소장 / 역할은 민간·연방·학술 자원제공자 조율, 컴퓨팅·데이터·모델·도구 통합, 단일 국가 포털 운영, 이용자 지원·문서화·교육 / NAIRR 파일럿은 첫 2년 반간 50개 주 전역 연구팀·교육기관 약 900곳 연결", "src": "NSF·UC샌디에이고 발표 9.1", "pd": "2026-09-01", "url": "https://today.ucsd.edu/story/strengthening-americas-ai-ecosystem-with-the-launch-of-the-nsf-nairr-operations-center", "grade": "S2"}, {"sec": 2, "t": "한국식품연구원, 젓갈·된장·김치 유래 미생물 5,000여 종을 미생물소재은행으로 개방", "k": "미생물 5,000여 종(젓갈 2,000여·된장 1,500여·김치류 1,000여) / 식품 원료 활용가능 2,900여 종 / 프로바이오틱스 후보 400여 종 / 기능정보 구축 1,200여 종 / KFRI 미생물소재은행 온라인 검색·신청·분양 일원화", "src": "대덕넷 보도 9.1", "pd": "2026-09-01", "url": "https://www.hellodd.com/news/articleView.html?idxno=113021", "grade": "S3"}, {"sec": 3, "t": "ETRI, 2035년까지 연구 전주기를 자율수행하는 '연구소장급 AI 과학자' 개발 로드맵 공개", "k": "3단계 — 'AI 연구동료' → '인간 감독형 자율과학 시스템' → 2035년 전주기 자율 연구 시스템 / 대덕넷 보도 기준 2028년 협업실험 검증·2031년 물리실험·2035년 연구소장급 / 구성요소 과학특화 파운데이션 모델·전문 AI 에이전트·가설생성·실험설계·과학 AI-OS·자율실험실 / 2031년까지 12.8Tbps 광 I/O 칩렛·3.2Tbps 광트랜시버, 2032년 이후 협업형 AIDC", "src": "ETRI 보도자료 9.1(첨부 HWP 전문) · 대덕넷·헤럴드경제 보도", "pd": "2026-09-01", "url": "https://www.etri.re.kr/kor/bbs/view.etri?b_board_id=ETRI06&b_idx=19797", "grade": "S1"}, {"sec": 4, "t": "英 유니버시티칼리지런던, 로컬 오픈웨이트 LLM 기반 자율 DFT 워크플로를 평가하며 문헌 재현성을 감사", "k": "소재 논문\u0001단독 저자", "src": "UCL arXiv 9.1", "pd": "2026-09-01", "url": "https://arxiv.org/abs/2608.29665", "grade": "S3"}, {"sec": 4, "t": "AI 과학자 시스템 24종을 감사한 프리프린트, 재현·검증 자료 공개율이 코드 공개율에 크게 못 미친다고 보고", "k": "실행가능 시스템 24종 전문 코딩 감사 / 코드 공개 83% / 재현용 시드·실행기록 공개 38% / 신규성 검증 방법 보고 38% / 폐루프 자율성(L4) 9종 중 외부 검증 사례 0건 / 후보 125편에서 35편 선별, 26편 전문 코딩", "src": "아마존웹서비스 프리프린트 6.29", "pd": "2026-06-29", "url": "https://arxiv.org/abs/2608.05179", "grade": "S3"}]}, {"date": "2026-09-01", "items": [{"sec": 2, "t": "EuroHPC, LUMI-AI 슈퍼컴 조달계약 체결 — 3억 8,780만 유로", "k": "€387.8M(약 5,900억 원, 도입·설치·유지보수 포함) / 현 LUMI 대비 AI 용량 10배·HPC 약 2배 / 2027년 하반기 배치, CSC 신규 데이터센터(카야니 Renforsin Ranta) / 재원은 EuroHPC JU 와 6개국(핀란드·체코·덴마크·에스토니아·노르웨이·폴란드) 컨소시엄이 절반씩 / EuroHPC 의 여섯 번째 AI 팩토리 조달계약 / 다중 이용·API 기반 접근", "src": "LUMI 발표 8.31", "pd": "2026-08-31", "url": "https://lumi-supercomputer.eu/bull-to-deliver-lumi-ai-supercomputer/", "grade": "S2"}, {"sec": 7, "t": "국가과학기술자문회의, 제5차 과학기술인재 육성·지원 기본계획(2026~2030) 확정", "k": "8.31 제9회 심의회의 확정 / AI 대전환·국가전략기술 중심으로 출연연 연구인력 증원, 4대 과기원 정원 확대 / 국가과학기술자 — 리더급 55세 이하 연 20명·총 100명에 연 1억 최대 5년, 차세대 연 200명·총 1,000명에 연 5,000만 원 / 리더급 첫 20명은 12월 발표 / 이공계 장학생 1만 명", "src": "자문회의 심의 8.31", "pd": "2026-08-31", "url": "https://www.mt.co.kr/tech/2026/08/31/2026083111570630996", "grade": "S3"}, {"sec": 1, "t": "EuroHPC, HPC 국가역량센터 네트워크 3기 착수", "k": "2026.4.1~2029.3.31 3년 / 36개 회원·협력국 NCC 네트워크 / 이번 단계에 NCC 3곳 신설 / NCC 는 자국 HPC·데이터분석·AI 역량을 조사·문서화하고 중소기업·산업 이용자에 상담·교육·자원접근을 제공하는 원스톱 창구 / 슈투트가르트 HPC 센터(HLRS) 조정 / 재원 디지털유럽 프로그램 + 참여국", "src": "EuroHPC 발표 8.31", "pd": "2026-08-31", "url": "https://hpc-portal.eu/projects/eurocc-3-national-competence-centres-in-the-framework-eurohpc", "grade": "S2"}, {"sec": 5, "t": "한국제약바이오협회 AI신약연구원, K-Fold 입문 특강 개최", "k": "9.1 서울 서초구 협회 회관 / AI 모델 연구자 대상 / 히츠 황상연 선행연구팀장 강의 / 개발배경·모델원리·예측성능 설명 후 하이퍼랩 실습 / K-Fold 는 단백질 구조뿐 아니라 단백질-약물후보물질-DNA-RNA 간 상호작용·결합구조까지 예측", "src": "이투데이 보도 9.1", "pd": "2026-09-01", "url": "https://www.etoday.co.kr/news/view/2620119", "grade": "S3"}]}, {"date": "2026-08-31", "items": [{"sec": 5, "t": "EU EuroHPC, AI for Science 상시공모 3차 컷오프 8월 31일 마감", "k": "상시공모(2025.5.15 개시) / 컷오프 8.31 10:00 룩셈부르크시간, 이후 10.30·12.11 / 배분기간 6개월, 자원접근까지 최대 1개월 / LUMI(CSC 핀란드)·Leonardo(CINECA 이탈리아)·MareNostrum5(BSC 스페인)·MeluXina / 국가·EU 지원 여부 무관 전 과학이용자와 공공부문, 산업은 호라이즌유럽 등 EU 과제 참여자 한정", "src": "EuroHPC 원문 · 컷오프 8.31", "pd": "2026-08-31", "url": "https://www.eurohpc-ju.europa.eu/document/download/a3fd3cad-cf13-4c0c-9257-b5cf5c70f2c5_en", "grade": "S1"}, {"sec": 2, "t": "IBM·시카고대, 고전 컴퓨팅으로 재현 불가한 계산을 15분 만에 수행", "k": "오류정정 논리큐비트 70개 / 약 15분 / 선도적 고전 기법으로 실용적 재현 불가", "src": "ScienceDaily 보도 8.30", "pd": "2026-08-30", "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/", "grade": "S3"}, {"sec": 3, "t": "KAIST 팀, 신약설계 바이오 AI 모델 'K-Fold' 공개", "k": "팀 KAIST / 과기정통부 AI 특화 파운데이션 모델 개발 사업 / 사전 서열탐색 단계 제거로 구조예측 속도 최대 25배 / 2026.3 평가서 분자복합체 정확도 알파폴드3 근접 / GPCR·Kinase·TPD 강점 / 무료 배포 예정, 교원창업기업 HITS 하이퍼랩에 탑재해 베타", "src": "헤럴드경제 보도 8.28", "pd": "2026-08-28", "url": "https://biz.heraldcorp.com/article/10854967", "grade": "S3"}, {"sec": 3, "t": "KAIST·써모피셔, 차세대 자율실험 연구허브 'SHARE Hub' 구축 합의", "k": "8.26 MOU / 연구자가 방향 제시 → AI 실험 설계 → 로봇 수행 → 데이터가 다시 AI 로 / 디지털·물리 '플러그 앤 플레이' 모듈 구조 / 생명·화학·의과학·AI·로봇 참여 / 국내외 기업·대학·연구기관·병원으로 참여 확대 계획", "src": "KAIST 발표 8.27", "pd": "2026-08-27", "url": "https://news.kaist.ac.kr/newsen/html/news/?mode=V&mng_no=66310", "grade": "S2"}, {"sec": 2, "t": "KISTI, 연구자용 클라우드 전용망 NDeX 서비스 개시", "k": "KREONET 이용 197개 기관 연구자 대상 / 수도권 평촌·중부권 대전·부산권 송정 3개 허브를 600Gbps 로 연결 / 인터넷과 논리적 분리 / AWS·엘리스가 초기 클라우드 파트너 / 2026.8 개시", "src": "이뉴스투데이 보도 8.28", "pd": "2026-08-27", "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2464264", "grade": "S3"}, {"sec": 6, "t": "AI가 18개월 묵은 유체역학 문제를 5주에 해결, 다만 자기일관적 오류 발생", "k": "콜로라도대 볼더 / 전기영동 나노입자 형상 문제 / 18개월 → 5주 / 미묘하지만 자기일관적인 수학 오류 / 요청받자 실제로 없던 오류 3개를 지어냄 / Journal of Fluid Mechanics", "src": "phys.org 보도 8.27", "pd": "2026-08-27", "url": "https://phys.org/news/2026-08-fast-error-prone-ai-decades.html", "grade": "S3"}]}, {"date": "2026-08-30", "items": [{"sec": 1, "t": "美 백악관, 제네시스 미션에 50억 달러 이상 투입 발표", "k": "$5B+(약 7조 원) / DOE 과학차관실 총괄 / 국립연·대학·기업 참여", "src": "백악관 발표 7.22", "pd": "2026-07-22", "url": "https://www.whitehouse.gov/", "grade": "발표"}, {"sec": 1, "t": "EU 집행위, Horizon Europe 2026–27 'AI in Science' 파일럿에 1억 유로 배정", "k": "€100M(약 1,500억 원) / RAISE 구상의 첫 실행 예산", "src": "EC 발표 보도", "pd": "2026-07-15", "url": "https://research-and-innovation.ec.europa.eu/", "grade": "발표"}, {"sec": 2, "t": "日 RIKEN, AI for Science 전용 슈퍼컴퓨터 명칭을 'RIKYU'로 확정", "k": "후가쿠와 별도 AI 전용 / ANL·후지쯔·엔비디아 협력", "src": "RIKEN 발표 6.19", "pd": "2026-06-19", "url": "https://www.riken.jp/", "grade": "발표"}, {"sec": 2, "t": "英 UKRI, AIRR 컴퓨팅 자원의 AI for Science 배분 트랙 공모", "k": "국가 AI 연구 자원(AIRR)의 과학 배분 트랙", "src": "UKRI 공고", "pd": "2026-08-14", "url": "https://www.ukri.org/", "grade": "발표"}, {"sec": 3, "t": "美 DOE, 제네시스 미션 오픈모델 이니셔티브 출범", "k": "아르곤연구소 운영 / 과학 모델 오픈웨이트 공개·수집 창구", "src": "AIwire 보도 8.12", "pd": "2026-08-12", "url": "https://www.hpcwire.com/aiwire/2026/08/12/doe-launches-open-model-initiative-for-genesis-mission/", "grade": "보도"}]}];
+window.AI4S.config = {"publisher": "AI+S&T정책센터", "audience": "과기정통부 과학기술인공지능혁신과", "title": "AI for Science Daily", "publishAt": "평일 08:30"};
+window.AI4S.editions = [{"date": "2026-09-04", "items": [{"sec": 1, "t": "美 DOE 과학국, 제네시스 미션 박사 펠로우십 파일럿 의견수렴 개시", "k": "인재양성을 학위과정 설계 단계에서 국가시설·산업체 배치와 묶는 방식이다 / 4년제 박사 · 이중역량 AI + 전공 · 국립연 1회 + 산업체 1회 배치 / 타운홀 9.24 10:00~15:00", "src": "HPCwire 보도 9.3", "pd": "2026-09-03", "url": "https://www.hpcwire.com/off-the-wire/doe-invites-community-input-on-genesis-mission-phd-fellowship-pilot/"}, {"sec": 4, "t": "텔레픽스, 위성 온보드 AI 기하보정·위치추정 궤도 실증 성공 발표", "k": "위성 데이터 처리의 무게중심이 지상국에서 궤도 위로 옮겨간 실증이다 / 15kg급 블루본 · 온보드 AI 테트라플렉스(500g 이하) / 8.21 12개 구간 19.4초 · 8.24 36개 구간 35초 · 오차 21.9km 상황에서도 매칭", "src": "머니투데이·AI타임스 보도 9.3", "pd": "2026-09-03", "url": "https://www.mt.co.kr/future/2026/09/03/2026090309111833811"}, {"sec": 6, "t": "사이언스, AI 의 논문심사 활용 가능성과 한계 진단 기사 게재", "k": "심사 보조와 심사 대행의 경계를 어디에 그을 것인지가 쟁점으로 올라왔다 / 신규성·중요성 판단에 회의 · 편향과 조작 위험 지적 / 국내 심사단계 AI 활용 규정 없음", "src": "Science 보도 9.3", "pd": "2026-09-03", "url": "https://www.science.org/content/article/can-ai-help-solve-peer-review-crisis-here-are-its-promises-and-pitfalls"}]}, {"date": "2026-09-03", "items": [{"sec": 1, "t": "KISTEP, 美 국가안보과학기술전략(NSSTS) 분석 브리프 발간", "k": "미국이 동맹국의 연구자금 수혜자와 데이터 반출에도 조건을 거는 근거가 원문에 명시 / NSSTS 2026.8.17 수립 / 연방 연구자금 수혜 개인·기관 추적체계 / 「인공지능 및 자율성」 항목 통합", "src": "KISTEP 브리프 9.2", "pd": "2026-09-02", "url": "https://www.kistep.re.kr/board.es?mid=a10306000000&bid=0031&list_no=94846&act=view"}]}, {"date": "2026-09-02", "items": [{"sec": 1, "t": "美 브룩헤이븐국립연구소, 제네시스 미션 Phase II 공모로 1,420만 달러 규모 전력망 파운데이션 모델 과제 주관", "k": "$14.2M(약 200억 원)·3년 / 24시간에 전력망 시나리오 10억 건 모의 목표 / PI 헨드릭 하만(브룩헤이븐 수석 AI 과학자) / MIT·IBM 리서치·엔비디아·MS·AWS·전력회사 참여 / GridFM 오픈소스는 리눅스재단 에너지가 관리 / 첫 Phase II 프로메테우스는 $60M(약 830억 원)로 산정 상단의 4배", "src": "보도 9.1", "pd": "2026-09-01", "url": "https://www.hpcwire.com/off-the-wire/brookhaven-lab-to-lead-14m-ai-project-for-nations-electric-grid/"}, {"sec": 2, "t": "美 NSF, 국가 AI 연구자원(NAIRR) 운영센터를 샌디에이고 슈퍼컴퓨터센터 주관으로 설립", "k": "5년 $35M(약 490억 원) 협력협약 / UC샌디에이고 SDSC 주관, 텍사스대 오스틴 TACC 협력 / 총괄 프랭크 뷔르트바인 SDSC 소장 / 역할은 민간·연방·학술 자원제공자 조율, 컴퓨팅·데이터·모델·도구 통합, 단일 국가 포털 운영, 이용자 지원·문서화·교육 / NAIRR 파일럿은 첫 2년 반간 50개 주 전역 연구팀·교육기관 약 900곳 연결", "src": "NSF·UC샌디에이고 발표 9.1", "pd": "2026-09-01", "url": "https://today.ucsd.edu/story/strengthening-americas-ai-ecosystem-with-the-launch-of-the-nsf-nairr-operations-center"}, {"sec": 2, "t": "한국식품연구원, 젓갈·된장·김치 유래 미생물 5,000여 종을 미생물소재은행으로 개방", "k": "미생물 5,000여 종(젓갈 2,000여·된장 1,500여·김치류 1,000여) / 식품 원료 활용가능 2,900여 종 / 프로바이오틱스 후보 400여 종 / 기능정보 구축 1,200여 종 / KFRI 미생물소재은행 온라인 검색·신청·분양 일원화", "src": "대덕넷 보도 9.1", "pd": "2026-09-01", "url": "https://www.hellodd.com/news/articleView.html?idxno=113021"}, {"sec": 3, "t": "ETRI, 2035년까지 연구 전주기를 자율수행하는 '연구소장급 AI 과학자' 개발 로드맵 공개", "k": "3단계 — 'AI 연구동료' → '인간 감독형 자율과학 시스템' → 2035년 전주기 자율 연구 시스템 / 대덕넷 보도 기준 2028년 협업실험 검증·2031년 물리실험·2035년 연구소장급 / 구성요소 과학특화 파운데이션 모델·전문 AI 에이전트·가설생성·실험설계·과학 AI-OS·자율실험실 / 2031년까지 12.8Tbps 광 I/O 칩렛·3.2Tbps 광트랜시버, 2032년 이후 협업형 AIDC", "src": "ETRI 보도자료 9.1(첨부 HWP 전문) · 대덕넷·헤럴드경제 보도", "pd": "2026-09-01", "url": "https://www.etri.re.kr/kor/bbs/view.etri?b_board_id=ETRI06&b_idx=19797"}, {"sec": 4, "t": "英 유니버시티칼리지런던, 로컬 오픈웨이트 LLM 기반 자율 DFT 워크플로를 평가하며 문헌 재현성을 감사", "k": "소재 논문\u0001단독 저자", "src": "UCL arXiv 9.1", "pd": "2026-09-01", "url": "https://arxiv.org/abs/2608.29665"}, {"sec": 4, "t": "AI 과학자 시스템 24종을 감사한 프리프린트, 재현·검증 자료 공개율이 코드 공개율에 크게 못 미친다고 보고", "k": "실행가능 시스템 24종 전문 코딩 감사 / 코드 공개 83% / 재현용 시드·실행기록 공개 38% / 신규성 검증 방법 보고 38% / 폐루프 자율성(L4) 9종 중 외부 검증 사례 0건 / 후보 125편에서 35편 선별, 26편 전문 코딩", "src": "아마존웹서비스 프리프린트 6.29", "pd": "2026-06-29", "url": "https://arxiv.org/abs/2608.05179"}]}, {"date": "2026-09-01", "items": [{"sec": 2, "t": "EuroHPC, LUMI-AI 슈퍼컴 조달계약 체결 — 3억 8,780만 유로", "k": "€387.8M(약 5,900억 원, 도입·설치·유지보수 포함) / 현 LUMI 대비 AI 용량 10배·HPC 약 2배 / 2027년 하반기 배치, CSC 신규 데이터센터(카야니 Renforsin Ranta) / 재원은 EuroHPC JU 와 6개국(핀란드·체코·덴마크·에스토니아·노르웨이·폴란드) 컨소시엄이 절반씩 / EuroHPC 의 여섯 번째 AI 팩토리 조달계약 / 다중 이용·API 기반 접근", "src": "LUMI 발표 8.31", "pd": "2026-08-31", "url": "https://lumi-supercomputer.eu/bull-to-deliver-lumi-ai-supercomputer/"}, {"sec": 7, "t": "국가과학기술자문회의, 제5차 과학기술인재 육성·지원 기본계획(2026~2030) 확정", "k": "8.31 제9회 심의회의 확정 / AI 대전환·국가전략기술 중심으로 출연연 연구인력 증원, 4대 과기원 정원 확대 / 국가과학기술자 — 리더급 55세 이하 연 20명·총 100명에 연 1억 최대 5년, 차세대 연 200명·총 1,000명에 연 5,000만 원 / 리더급 첫 20명은 12월 발표 / 이공계 장학생 1만 명", "src": "자문회의 심의 8.31", "pd": "2026-08-31", "url": "https://www.mt.co.kr/tech/2026/08/31/2026083111570630996"}, {"sec": 1, "t": "EuroHPC, HPC 국가역량센터 네트워크 3기 착수", "k": "2026.4.1~2029.3.31 3년 / 36개 회원·협력국 NCC 네트워크 / 이번 단계에 NCC 3곳 신설 / NCC 는 자국 HPC·데이터분석·AI 역량을 조사·문서화하고 중소기업·산업 이용자에 상담·교육·자원접근을 제공하는 원스톱 창구 / 슈투트가르트 HPC 센터(HLRS) 조정 / 재원 디지털유럽 프로그램 + 참여국", "src": "EuroHPC 발표 8.31", "pd": "2026-08-31", "url": "https://hpc-portal.eu/projects/eurocc-3-national-competence-centres-in-the-framework-eurohpc"}, {"sec": 5, "t": "한국제약바이오협회 AI신약연구원, K-Fold 입문 특강 개최", "k": "9.1 서울 서초구 협회 회관 / AI 모델 연구자 대상 / 히츠 황상연 선행연구팀장 강의 / 개발배경·모델원리·예측성능 설명 후 하이퍼랩 실습 / K-Fold 는 단백질 구조뿐 아니라 단백질-약물후보물질-DNA-RNA 간 상호작용·결합구조까지 예측", "src": "이투데이 보도 9.1", "pd": "2026-09-01", "url": "https://www.etoday.co.kr/news/view/2620119"}]}, {"date": "2026-08-31", "items": [{"sec": 5, "t": "EU EuroHPC, AI for Science 상시공모 3차 컷오프 8월 31일 마감", "k": "상시공모(2025.5.15 개시) / 컷오프 8.31 10:00 룩셈부르크시간, 이후 10.30·12.11 / 배분기간 6개월, 자원접근까지 최대 1개월 / LUMI(CSC 핀란드)·Leonardo(CINECA 이탈리아)·MareNostrum5(BSC 스페인)·MeluXina / 국가·EU 지원 여부 무관 전 과학이용자와 공공부문, 산업은 호라이즌유럽 등 EU 과제 참여자 한정", "src": "EuroHPC 원문 · 컷오프 8.31", "pd": "2026-08-31", "url": "https://www.eurohpc-ju.europa.eu/document/download/a3fd3cad-cf13-4c0c-9257-b5cf5c70f2c5_en"}, {"sec": 2, "t": "IBM·시카고대, 고전 컴퓨팅으로 재현 불가한 계산을 15분 만에 수행", "k": "오류정정 논리큐비트 70개 / 약 15분 / 선도적 고전 기법으로 실용적 재현 불가", "src": "ScienceDaily 보도 8.30", "pd": "2026-08-30", "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/"}, {"sec": 3, "t": "KAIST 팀, 신약설계 바이오 AI 모델 'K-Fold' 공개", "k": "팀 KAIST / 과기정통부 AI 특화 파운데이션 모델 개발 사업 / 사전 서열탐색 단계 제거로 구조예측 속도 최대 25배 / 2026.3 평가서 분자복합체 정확도 알파폴드3 근접 / GPCR·Kinase·TPD 강점 / 무료 배포 예정, 교원창업기업 HITS 하이퍼랩에 탑재해 베타", "src": "헤럴드경제 보도 8.28", "pd": "2026-08-28", "url": "https://biz.heraldcorp.com/article/10854967"}, {"sec": 3, "t": "KAIST·써모피셔, 차세대 자율실험 연구허브 'SHARE Hub' 구축 합의", "k": "8.26 MOU / 연구자가 방향 제시 → AI 실험 설계 → 로봇 수행 → 데이터가 다시 AI 로 / 디지털·물리 '플러그 앤 플레이' 모듈 구조 / 생명·화학·의과학·AI·로봇 참여 / 국내외 기업·대학·연구기관·병원으로 참여 확대 계획", "src": "KAIST 발표 8.27", "pd": "2026-08-27", "url": "https://news.kaist.ac.kr/newsen/html/news/?mode=V&mng_no=66310"}, {"sec": 2, "t": "KISTI, 연구자용 클라우드 전용망 NDeX 서비스 개시", "k": "KREONET 이용 197개 기관 연구자 대상 / 수도권 평촌·중부권 대전·부산권 송정 3개 허브를 600Gbps 로 연결 / 인터넷과 논리적 분리 / AWS·엘리스가 초기 클라우드 파트너 / 2026.8 개시", "src": "이뉴스투데이 보도 8.28", "pd": "2026-08-27", "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2464264"}, {"sec": 6, "t": "AI가 18개월 묵은 유체역학 문제를 5주에 해결, 다만 자기일관적 오류 발생", "k": "콜로라도대 볼더 / 전기영동 나노입자 형상 문제 / 18개월 → 5주 / 미묘하지만 자기일관적인 수학 오류 / 요청받자 실제로 없던 오류 3개를 지어냄 / Journal of Fluid Mechanics", "src": "phys.org 보도 8.27", "pd": "2026-08-27", "url": "https://phys.org/news/2026-08-fast-error-prone-ai-decades.html"}]}, {"date": "2026-08-30", "items": [{"sec": 1, "t": "美 백악관, 제네시스 미션에 50억 달러 이상 투입 발표", "k": "$5B+(약 7조 원) / DOE 과학차관실 총괄 / 국립연·대학·기업 참여", "src": "백악관 발표 7.22", "pd": "2026-07-22", "url": "https://www.whitehouse.gov/"}, {"sec": 1, "t": "EU 집행위, Horizon Europe 2026–27 'AI in Science' 파일럿에 1억 유로 배정", "k": "€100M(약 1,500억 원) / RAISE 구상의 첫 실행 예산", "src": "EC 발표 보도", "pd": "2026-07-15", "url": "https://research-and-innovation.ec.europa.eu/"}, {"sec": 2, "t": "日 RIKEN, AI for Science 전용 슈퍼컴퓨터 명칭을 'RIKYU'로 확정", "k": "후가쿠와 별도 AI 전용 / ANL·후지쯔·엔비디아 협력", "src": "RIKEN 발표 6.19", "pd": "2026-06-19", "url": "https://www.riken.jp/"}, {"sec": 2, "t": "英 UKRI, AIRR 컴퓨팅 자원의 AI for Science 배분 트랙 공모", "k": "국가 AI 연구 자원(AIRR)의 과학 배분 트랙", "src": "UKRI 공고", "pd": "2026-08-14", "url": "https://www.ukri.org/"}, {"sec": 3, "t": "美 DOE, 제네시스 미션 오픈모델 이니셔티브 출범", "k": "아르곤연구소 운영 / 과학 모델 오픈웨이트 공개·수집 창구", "src": "AIwire 보도 8.12", "pd": "2026-08-12", "url": "https://www.hpcwire.com/aiwire/2026/08/12/doe-launches-open-model-initiative-for-genesis-mission/"}]}];
 
 </script>
 <script>
@@ -620,33 +705,16 @@ window.AI4S.editions = [{"date": "2026-09-03", "items": [{"sec": 1, "t": "KISTEP
     { id: 'arch', n: '02', label: '아카이브' }
   ];
 
-  /* 항목 하나를 사실 단위로 그린다.
-     제목 = 주체와 사실 / 아래 줄 = 수치·기한 / 끝 = 발표일·출처·원문 링크.
-     해석과 판단근거(韓 연계)는 여기 싣지 않는다 — 내부 화면이 진다. */
-  function fact(x, q) {
-    var body = x.k || x.body || '';
-    var h = '<div class="fact">'
-      + '<div class="ft">' + mark(x.t, q) + '</div>'
-      + (body ? '<div class="fk">' + mark(body, q) + '</div>' : '')
-      + '<div class="fm">' + A.pubMeta(x);
-    if (x.src) { h += '<span class="chip">' + A.esc(x.src) + '</span>'; }
-    if (x.grade) { h += '<span class="chip a">' + A.esc(x.grade) + '</span>'; }
-    if (x.date) { h += '<span class="chip">' + A.esc(A.fmtDate(x.date)) + ' 발행</span>'; }
-    return h + '</div></div>';
-  }
-
-  function mark(s, q) {
-    var e = A.esc(s || '');
-    if (!q) return e;
-    try {
-      return e.replace(new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'),
-                       '<mark>$1</mark>');
-    } catch (err) { return e; }
-  }
+  /* 항목·섹션·요약 렌더는 assets/site.js 의 A.factHTML · A.sectionsHTML ·
+     A.digestOf 가 진다. 관리용 후보풀 화면의 당일 미리보기가 같은 함수를 불러
+     그리므로, 담당자가 체크하며 본 화면과 이 지면이 어긋나지 않는다.
+     (이 파일에는 관리용 경로를 문자열로도 적지 않는다 — check.py 가 잡는다) */
 
   A.page({
-    title: 'AI for Science 데일리',
-    sub: (cfg.audience || '과기정통부 과학기술인공지능혁신과') + ' · ' + (cfg.publishAt || '평일 08:30'),
+    title: 'AI for Science Daily',
+    /* 셋째 줄에서 수신처를 뺐다 (2026-09-03 지시). 이 면은 밖으로 나가는 지면이라
+       받는 부서 이름을 박지 않는다 — 발행 주기만 남긴다. */
+    sub: (cfg.publishAt || '평일 08:30'),
     nav: [], here: '',
     footNote: '확인된 사실과 원문만 싣습니다'
   }, function (root) {
@@ -692,17 +760,14 @@ window.AI4S.editions = [{"date": "2026-09-03", "items": [{"sec": 1, "t": "KISTEP
       + '<span class="count"><b>' + A.fmtDate(ed.date) + '</b> 조간</span>'
       + (next ? '<button class="act ghost" type="button" data-go="' + A.esc(next.date) + '">← 다음 호</button>' : '')
       + (prev ? '<button class="act ghost" type="button" data-go="' + A.esc(prev.date) + '">이전 호 →</button>' : '')
-      + '<span class="count">항목 <b>' + ed.items.length + '</b>건</span>'
       + (ed.text ? '<button class="act" id="copyBtn" type="button">전문 복사</button>' : '')
       + '<span class="src" id="copyMsg"></span></div>';
 
-    A.SECTIONS.forEach(function (name, si) {
-      var its = (ed.items || []).filter(function (x) { return x.sec === si + 1; });
-      if (!its.length) return;          // 없는 섹션은 내보내지 않는다
-      h += '<div class="secblk" data-sec="' + (si + 1) + '"><h3>' + A.esc(name) + '</h3>';
-      its.forEach(function (x) { h += fact(x, ''); });
-      h += '</div>';
-    });
+    /* 머리에는 날짜와 호 이동만 둔다 — 항목 건수도, 그날 요약도 두지 않는다
+       (2026-09-03 재지시). 한 줄로 함축하려면 그날의 축을 우리가 정해야 하고,
+       그것이 곧 해석이다. 지면은 사실만 세우고 판단은 내부 화면이 진다. */
+
+    h += A.sectionsHTML(ed.items, '');   // 없는 섹션은 내보내지 않는다
 
     /* picked.world 집계와 수집 창은 우리 작업 기록이다. 공유용에는 싣지 않는다.
        둘 다 내부 후보풀 화면이 패널로 계속 보여 준다.
@@ -731,7 +796,7 @@ window.AI4S.editions = [{"date": "2026-09-03", "items": [{"sec": 1, "t": "KISTEP
     eds.forEach(function (e) {
       (e.items || []).forEach(function (x) {
         items.push({ date: e.date, sec: x.sec, t: x.t, k: x.k || '', body: x.body || '',
-                     src: x.src || '', grade: x.grade || '', pd: x.pd || '', url: x.url || '' });
+                     src: x.src || '', pd: x.pd || '', url: x.url || '' });
       });
     });
 
@@ -783,7 +848,7 @@ window.AI4S.editions = [{"date": "2026-09-03", "items": [{"sec": 1, "t": "KISTEP
           h2 += '<div class="secblk" data-sec="' + x.sec + '"><h3>'
             + A.esc(A.SECTIONS[x.sec - 1] || '') + '</h3>';
         }
-        h2 += fact(x, q);
+        h2 += A.factHTML(x, q);
       });
       document.getElementById('list').innerHTML = h2 + '</div>';
     }
