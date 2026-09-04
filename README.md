@@ -1,6 +1,6 @@
 # AI·ST 정책 — AI for Science 데일리
 
-국가AI·ST정책연구센터가 과기정통부 인공지능혁신과에 보내는 **AI for Science 일간 동향**의
+AI+S&T정책센터가 과기정통부 인공지능혁신과에 보내는 **AI for Science 일간 동향**의
 공개 열람면입니다.
 
 **https://ai4s.day/**
@@ -28,4 +28,4 @@ git add index.html && git commit -m "YYYY-MM-DD 호" && git push
 
 ## 문의
 
-국가AI·ST정책연구센터
+AI+S&T정책센터
