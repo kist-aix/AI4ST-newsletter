@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F5F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D131B" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="주요국 AI4S 연구인프라 경쟁">
+<meta property="og:description" content="美·EU·中·日 인프라 현황과 韓의 대응방향 — AI+S&T정책센터 이슈리포트 (2026.9.7)">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="AI+S&amp;T정책센터">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="주요국 AI4S 연구인프라 경쟁">
+<meta name="twitter:description" content="美·EU·中·日 인프라 현황과 韓의 대응방향 — AI+S&T정책센터 이슈리포트 (2026.9.7)">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+
+<meta name="author" content="AI+S&amp;T정책센터">
+<meta name="description" content="주요국 AI4S 연구인프라 경쟁 — 美·EU·中·日 인프라 현황과 韓의 대응방향. AI+S&amp;T정책센터 이슈리포트 심층본(2026.9.7).">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+<title>AI4S 인프라 경쟁 해부</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --ground:#F3F5F8; --surface:#FFFFFF; --surface-2:#EAEEF4;
+  --ink:#131B27; --ink-2:#4A5768; --ink-3:#7A8798;
+  --rule:#D6DDE7; --rule-strong:#B7C2D0;
+  --accent:#17457E; --accent-soft:#E2EAF5;
+  --accent-2:#A9541F; --accent-2-soft:#F5E8DE;
+  --warn:#8A3324; --warn-soft:#F7E6E2;
+  --ok:#1D6042; --ok-soft:#DFF0E8;
+  --kr:#8A5A00; --kr-soft:#FBF0DA;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0D131B; --surface:#151F2B; --surface-2:#1B2836;
+    --ink:#E7EDF4; --ink-2:#9DABBC; --ink-3:#7A8798;
+    --rule:#28364A; --rule-strong:#3A4B62;
+    --accent:#7CB0E8; --accent-soft:#1B2B41;
+    --accent-2:#DC8F52; --accent-2-soft:#33241A;
+    --warn:#E29383; --warn-soft:#341E1A;
+    --ok:#78CFA6; --ok-soft:#122A20;
+    --kr:#E0B860; --kr-soft:#2E2413;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0D131B; --surface:#151F2B; --surface-2:#1B2836;
+  --ink:#E7EDF4; --ink-2:#9DABBC; --ink-3:#7A8798;
+  --rule:#28364A; --rule-strong:#3A4B62;
+  --accent:#7CB0E8; --accent-soft:#1B2B41;
+  --accent-2:#DC8F52; --accent-2-soft:#33241A;
+  --warn:#E29383; --warn-soft:#341E1A;
+  --ok:#78CFA6; --ok-soft:#122A20;
+  --kr:#E0B860; --kr-soft:#2E2413;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,sans-serif;
+  font-size:16px;line-height:1.8;margin:0;padding:0 20px 96px;word-break:keep-all;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto}
+.prose{max-width:42em}
+.masthead{border-bottom:2px solid var(--ink);padding:56px 0 20px;margin-bottom:34px}
+.kicker{font-size:12px;letter-spacing:.16em;font-weight:600;color:var(--accent);text-transform:uppercase}
+h1{font-family:"Gowun Batang","Noto Serif KR","Batang","바탕",Georgia,serif;font-weight:700;
+  font-size:clamp(32px,5vw,52px);line-height:1.2;margin:14px 0 12px;text-wrap:balance}
+.dek{font-size:17px;color:var(--ink-2);max-width:40em;margin:0 0 20px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--ink-3);
+  padding-top:8px;border-top:1px solid var(--rule);font-variant-numeric:tabular-nums}
+.meta b{color:var(--ink-2);font-weight:600}
+section{margin:56px 0 0}
+.eyebrow{font-size:11px;letter-spacing:.2em;font-weight:600;color:var(--ink-3);
+  text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
+h2{font-family:"Gowun Batang","Noto Serif KR","Batang","바탕",Georgia,serif;font-weight:700;
+  font-size:clamp(23px,3.1vw,31px);line-height:1.32;margin:0 0 14px;text-wrap:balance}
+h3{font-size:17px;font-weight:600;margin:34px 0 8px;line-height:1.5;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+p{margin:0 0 14px}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.num{font-family:"IBM Plex Mono",monospace;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* inline source chip */
+.src{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  font-weight:600;letter-spacing:.02em;vertical-align:2px;margin:0 1px;
+  padding:1px 5px;border:1px solid var(--rule-strong);border-radius:2px;
+  color:var(--ink-2);text-decoration:none;white-space:nowrap;line-height:1.5}
+.src:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.src.p{border-color:var(--accent);color:var(--accent)}
+
+/* country chip */
+.cty{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  font-weight:600;letter-spacing:.06em;padding:2px 9px;border-radius:2px;
+  border:1px solid currentColor;white-space:nowrap;line-height:1.6}
+.c-us{color:var(--accent);background:var(--accent-soft)}
+.c-eu{color:var(--ok);background:var(--ok-soft)}
+.c-cn{color:var(--warn);background:var(--warn-soft)}
+.c-jp{color:var(--accent-2);background:var(--accent-2-soft)}
+.c-kr{color:var(--kr);background:var(--kr-soft)}
+
+/* findings */
+.finds{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:24px 0}
+.find{background:var(--surface);padding:18px 20px;display:grid;
+  grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.find .n{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:600;
+  color:var(--accent);line-height:1.2}
+.find .b h4{margin:0 0 4px;font-size:16px;font-weight:600;line-height:1.5}
+.find .b p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.75}
+
+/* tables */
+.tw{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;
+  background:var(--surface);border:1px solid var(--rule)}
+.tw table{min-width:640px}
+th,td{padding:11px 14px;border-bottom:1px solid var(--rule);text-align:left;
+  vertical-align:top;line-height:1.7}
+th{background:var(--surface-2);font-weight:600;color:var(--accent);font-size:12.5px}
+tr:last-child td{border-bottom:none}
+td.mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+td b{font-weight:600}
+tr.krrow td{background:var(--kr-soft)}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;
+  border-radius:2px;white-space:nowrap;letter-spacing:.02em}
+.b-ok{background:var(--ok-soft);color:var(--ok)}
+.b-mid{background:var(--accent-soft);color:var(--accent)}
+.b-low{background:var(--warn-soft);color:var(--warn)}
+.b-kr{background:var(--kr-soft);color:var(--kr)}
+
+/* figures */
+figure{margin:32px 0;background:var(--surface);border:1px solid var(--rule)}
+.figbody{padding:22px 22px 6px;overflow-x:auto}
+figure svg{display:block;width:100%;min-width:660px;height:auto;color:var(--ink)}
+figcaption{padding:12px 22px 16px;font-size:13px;color:var(--ink-2);
+  border-top:1px solid var(--rule);line-height:1.7}
+figcaption b{color:var(--ink);font-weight:600}
+.dg .box{fill:var(--surface-2);stroke:var(--rule-strong);stroke-width:1}
+.dg .box-a{fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5}
+.dg .box-b{fill:var(--kr-soft);stroke:var(--kr);stroke-width:1.5}
+.dg .t{fill:var(--ink);font-family:"IBM Plex Sans KR",sans-serif;font-size:13px}
+.dg .t-s{fill:var(--ink-2);font-family:"IBM Plex Sans KR",sans-serif;font-size:11.5px}
+.dg .t-n{fill:var(--accent);font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600}
+.dg .t-hd{fill:var(--ink);font-family:"IBM Plex Sans KR",sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em}
+.dg .ln{stroke:var(--rule-strong);stroke-width:1.4;fill:none}
+.dg .ln-a{stroke:var(--accent);stroke-width:1.6;fill:none}
+.dg .ln-b{stroke:var(--kr);stroke-width:1.6;fill:none}
+.dg .dash{stroke-dasharray:5 4}
+.dg .ah{fill:var(--rule-strong)} .dg .ah-a{fill:var(--accent)} .dg .ah-b{fill:var(--kr)}
+
+/* risk cards */
+.risks{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:22px 0}
+.risk{background:var(--surface);padding:18px 20px}
+.risk .tag{font-size:11px;letter-spacing:.14em;font-weight:600;color:var(--warn);text-transform:uppercase}
+.risk h4{margin:8px 0 6px;font-size:15.5px;font-weight:600;line-height:1.5}
+.risk p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.75}
+
+/* callout */
+.callout{border:1px solid var(--accent-2);background:var(--surface);margin:26px 0}
+.callout .hd{background:var(--accent-2-soft);padding:13px 22px;border-bottom:1px solid var(--accent-2);
+  font-size:12px;letter-spacing:.16em;font-weight:600;color:var(--accent-2);text-transform:uppercase}
+.callout .bd{padding:20px 22px}
+.callout .bd p:last-child{margin-bottom:0}
+.callout.kr{border-color:var(--kr)}
+.callout.kr .hd{background:var(--kr-soft);border-color:var(--kr);color:var(--kr)}
+
+/* 韓 대비 인라인 박스 */
+.vskr{background:var(--kr-soft);border-left:3px solid var(--kr);padding:14px 18px;margin:16px 0;
+  font-size:14.5px;line-height:1.78;color:var(--ink-2)}
+.vskr .lb{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  letter-spacing:.12em;color:var(--kr);display:block;margin-bottom:4px}
+.vskr b{color:var(--ink);font-weight:600}
+
+/* 대응방향 리스트 */
+.acts{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:22px 0}
+.act{background:var(--surface);padding:17px 20px;display:grid;
+  grid-template-columns:104px 1fr;gap:18px;align-items:start}
+.act .k{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;
+  letter-spacing:.08em;color:var(--accent);text-transform:uppercase;padding-top:3px}
+.act h4{margin:0 0 5px;font-size:15.5px;font-weight:600;line-height:1.5}
+.act p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.76}
+
+ul.gaps{list-style:none;padding:0;margin:16px 0}
+ul.gaps li{padding:11px 0 11px 26px;border-top:1px solid var(--rule);
+  font-size:14.5px;color:var(--ink-2);line-height:1.75;position:relative}
+ul.gaps li:last-child{border-bottom:1px solid var(--rule)}
+ul.gaps li::before{content:"?";position:absolute;left:0;top:11px;
+  font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--accent-2)}
+ul.gaps li b{color:var(--ink);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12.5px;color:var(--ink-2);margin:14px 0 0}
+footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--rule);
+  font-size:12.5px;color:var(--ink-3);line-height:1.95}
+footer a{color:var(--ink-2)}
+footer .lbl{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--ink-2)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* 추가 컴포넌트 */
+.jp-orig{font-size:13px;color:var(--ink-2);background:var(--surface-2);
+  padding:10px 14px;border-left:2px solid var(--rule-strong);margin:10px 0 0;line-height:1.7}
+ul.sub{list-style:none;padding:0;margin:6px 0 14px}
+ul.sub li{position:relative;padding:4px 0 4px 18px;font-size:15px;color:var(--ink-2);line-height:1.78}
+ul.sub li::before{content:"—";position:absolute;left:0;top:4px;color:var(--ink-3)}
+ul.gaps.src-list li{font-size:13.5px;line-height:1.85}
+ul.gaps.src-list li::before{content:"";}
+ul.gaps.src-list li{padding-left:0}
+.act .k{white-space:normal;line-height:1.45}
+h3 .cty{flex:0 0 auto}
+
+/* 요약장 / 페이지 전환 */
+.sumwrap{border:1px solid var(--rule);background:var(--surface);margin:24px 0 0}
+.sumhd{background:var(--accent-soft);color:var(--accent);padding:12px 22px;
+  font-size:12px;letter-spacing:.16em;font-weight:600;text-transform:uppercase;
+  border-bottom:1px solid var(--rule)}
+.ol{display:grid;gap:1px;background:var(--rule)}
+.ol .row{background:var(--surface);padding:13px 22px;display:grid;
+  grid-template-columns:42px 1fr;gap:14px;align-items:baseline}
+.ol .row .i{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;
+  color:var(--accent);letter-spacing:.02em}
+.ol .row .x{font-size:15.5px;line-height:1.75}
+.ol.types .row{grid-template-columns:74px 1fr}
+.nextbar{display:flex;justify-content:space-between;align-items:center;gap:18px;
+  margin:40px 0 0;padding:18px 22px;border:1px solid var(--accent);
+  background:var(--accent-soft);color:var(--accent);cursor:pointer;
+  font-size:15px;font-weight:600;width:100%;text-align:left;font-family:inherit;
+  border-radius:0;transition:background .12s ease}
+.nextbar:hover{background:var(--surface)}
+.nextbar:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.nextbar .arrow{font-family:"IBM Plex Mono",monospace;font-size:18px}
+.topbar{display:flex;align-items:center;gap:16px;padding:14px 0 12px;
+  border-bottom:1px solid var(--rule);margin-bottom:8px;position:sticky;top:0;
+  background:var(--ground);z-index:5}
+.backbtn{border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  padding:6px 13px;font-size:13px;font-family:inherit;cursor:pointer;border-radius:2px}
+.backbtn:hover{border-color:var(--accent);color:var(--accent)}
+.backbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.topbar .ttl{font-size:13px;color:var(--ink-3);letter-spacing:.04em}
+#doc section:first-of-type{margin-top:34px}
+/* ── 외부 배포 보완: 스크립트가 없거나 차단된 환경 ── */
+/* JS 미실행 시 요약·본문이 한 문서로 모두 보인다 (내용 유실 방지) */
+html:not(.js) .nextbar,
+html:not(.js) .topbar{display:none}
+html.js #doc{display:none}
+html.js #doc.on{display:block}
+html.js #cover.off{display:none}
+
+/* ── 인쇄 / PDF 저장 (A4) ── */
+@media print{
+  @page{size:A4;margin:16mm 14mm}
+  html,body{background:#fff!important;color:#000!important;font-size:10.2pt;line-height:1.6}
+  .wrap{max-width:none}
+  body{padding:0}
+  /* 화면에서 접혀 있어도 인쇄물에는 전부 나온다 */
+  html.js #doc,#doc,#cover{display:block!important}
+  .nextbar,.topbar,.backbtn{display:none!important}
+  a{color:#000!important;text-decoration:none}
+  .src{border-color:#999!important;color:#333!important}
+  section{page-break-inside:auto;margin-top:22px}
+  h1,h2,h3{page-break-after:avoid;text-wrap:balance}
+  figure,table,.docinfo{page-break-inside:avoid}
+  thead{display:table-header-group}
+  tr,li,p{page-break-inside:avoid}
+  .masthead{padding-top:0}
+  #doc{page-break-before:always}
+}
+
+/* ── 문서정보 ── */
+.docinfo{margin:44px 0 0;border:1px solid var(--rule-strong);background:var(--surface);
+  padding:20px 22px}
+.docinfo h4{margin:0 0 12px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);font-weight:600}
+.docinfo dl{display:grid;grid-template-columns:104px 1fr;gap:7px 16px;margin:0;font-size:13.5px}
+.docinfo dt{color:var(--ink-3);font-weight:600}
+.docinfo dd{margin:0;color:var(--ink-2)}
+.docinfo .cite{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--rule);
+  font-size:13px;color:var(--ink-2);line-height:1.72}
+.docinfo .cite b{color:var(--ink)}
+@media (max-width:560px){.docinfo dl{grid-template-columns:1fr;gap:2px 0}
+  .docinfo dd{margin-bottom:8px}}
+</style>
+
+<style>
+.rd{font-size:.82em;color:var(--ink-3);font-weight:400;margin-left:1px}
+.tnote{font-size:12.5px;color:var(--ink-3);margin-top:6px}
+.figcap{font-size:13px;color:var(--ink-2);margin-top:8px}
+</style>
+
+<style>
+.src-a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+.src-a:hover{border-bottom-color:var(--accent)}
+.src-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media print{.src-a{color:#000!important;border-bottom:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div id="cover">
+<header class="masthead">
+  <div class="kicker">이슈리포트 · AI4S 연구인프라 / 美·EU·中·日</div>
+  <h1>주요국 AI4S 연구인프라 경쟁</h1>
+  <p class="dek">美·EU·中·日 인프라 현황과 韓의 대응방향</p>
+  <div class="meta">
+    <span><b>작성</b> AI+S&amp;T정책센터 · 2026. 9. 7.</span>
+    <span>※ 환산은 근사치($1≈1,380원, €1≈1,600원, 100엔≈900원, 1위안≈195원)</span>
+  </div>
+</header>
+<section>
+<div class="eyebrow">요약</div>
+<h2>한 장으로 보는 결론</h2>
+
+<div class="sumwrap">
+<div class="sumhd">핵심 발견 여섯 가지</div>
+<div class="ol">
+<div class="row"><div class="i">01</div><div class="x">차이는 규모보다는, <b>무엇을 먼저 채웠는가</b>에 있다.</div></div>
+<div class="row"><div class="i">02</div><div class="x">미국은 <b>법률이 행정명령보다 넉 달 앞섰다</b> — OBBB법 §50404가 American Science Cloud를 정의(’25.7.4)한 뒤 공고·착수가 이어졌다.</div></div>
+<div class="row"><div class="i">03</div><div class="x">한국은 이미 <b>결집형에 들어섰다</b> — NAIS가 ’26.5 NST 내부 조직으로 업무를 개시했고(약 20명), 통합플랫폼은 아직 미가동이다.</div></div>
+<div class="row"><div class="i">04</div><div class="x">그 <b>결집 범위가 확정되지 않았다</b> — 정부가 명시한 대상은 학습데이터·컴퓨팅·AI 모델이고, 연구장비·연구시설(ZEUS)의 포함 여부는 밝혀져 있지 않다.</div></div>
+<div class="row"><div class="i">05</div><div class="x"><b>AI 반도체만으로는 과학계산이 되지 않는다</b> — 모델 학습은 저정밀(FP16), 시뮬레이션·수치해석은 고정밀(FP64)을 쓴다. TOP500 1위는 AI 가속기 없이 CPU만으로 올랐고, 中 국산 NPU에는 FP64 가속이 없다.</div></div>
+<div class="row"><div class="i">06</div><div class="x">韓에 없는 것은 계정이 아니라 <b>미션이 예산을 움직일 권한</b>이다 — 「과학기술×AI」 예산분야는 있으나 K-문샷은 회계 단위가 아니고 PD에 예산 조정권이 없다.</div></div>
+</div>
+</div>
+
+<div class="sumwrap">
+<div class="sumhd">접근 유형 — 다섯 나라가 먼저 채운 것</div>
+<div class="ol types">
+<div class="row"><div class="i"><span class="cty c-us">美</span></div><div class="x"><b>결집형</b> — 기존 국립연구소 자산을 하나의 플랫폼으로 묶는다. 근거는 행정명령이 아니라 법률이다.</div></div>
+<div class="row"><div class="i"><span class="cty c-cn">中</span></div><div class="x"><b>시설형·공급선행</b> — 산력을 먼저 깔고 수요를 붙인다. 국가급 실시문건은 아직 없고 베이징시가 앞서 있다.</div></div>
+<div class="row"><div class="i"><span class="cty c-eu">EU</span></div><div class="x"><b>시설형·분담</b> — 회원국 매칭으로 시설을 짓고 위에 조정 레이어를 얹는다. 그 레이어가 비어 있다.</div></div>
+<div class="row"><div class="i"><span class="cty c-jp">日</span></div><div class="x"><b>프로그램형</b> — 방침 → 예산계정 → 공모 → 증액의 체인을 6개월 만에 완주했다. 요구액의 45%가 연구인프라다.</div></div>
+<div class="row"><div class="i"><span class="cty c-kr">韓</span></div><div class="x"><b>결집형 지향</b> — 전략·조직·설계는 갖췄고, <b>결집 범위·강제 근거와 미션의 예산 권한</b>이 비어 있다.</div></div>
+</div>
+</div>
+
+<figure>
+<div class="figbody">
+<svg class="dg" role="img" viewBox="0 0 1000 300" aria-label="미국은 법률과 자산 결집을, 중국은 계산시설 선공급을, 유럽은 회원국 분담과 조정 레이어를, 일본은 예산계정과 공모 체인을 먼저 채웠고, 한국은 전략과 조직을 세웠으나 결집 범위와 예산 권한이 비어 있다는 비교 도식">
+<text class="t-hd" x="20" y="26">먼저 채운 것  →  그다음  →  현재 상태</text>
+
+<rect class="box-a" x="20" y="44" width="152" height="44" rx="2"></rect>
+<text class="t" x="96" y="64" text-anchor="middle" style="font-weight:600">美 · 결집형</text>
+<text class="t-s" x="96" y="80" text-anchor="middle">법률 §50404</text>
+<path class="ln-a" d="M172,66 H236"></path>
+<rect class="box" x="236" y="44" width="180" height="44" rx="2"></rect>
+<text class="t-s" x="326" y="70" text-anchor="middle">공고 → ASSP 조직</text>
+<path class="ln-a" d="M416,66 H480"></path>
+<rect class="box" x="480" y="44" width="220" height="44" rx="2"></rect>
+<text class="t-s" x="590" y="70" text-anchor="middle">플랫폼 제품 12종 중 정식운영 0</text>
+
+<rect class="box" x="20" y="102" width="152" height="44" rx="2"></rect>
+<text class="t" x="96" y="122" text-anchor="middle" style="font-weight:600">中 · 공급선행</text>
+<text class="t-s" x="96" y="138" text-anchor="middle">산력 2,185EF</text>
+<path class="ln" d="M172,124 H236"></path>
+<rect class="box" x="236" y="102" width="180" height="44" rx="2"></rect>
+<text class="t-s" x="326" y="128" text-anchor="middle">지방(베이징) 실시방안</text>
+<path class="ln" d="M416,124 H480"></path>
+<rect class="box" x="480" y="102" width="220" height="44" rx="2"></rect>
+<text class="t-s" x="590" y="128" text-anchor="middle">국가급 실시문건 미발표</text>
+
+<rect class="box" x="20" y="160" width="152" height="44" rx="2"></rect>
+<text class="t" x="96" y="180" text-anchor="middle" style="font-weight:600">EU · 분담</text>
+<text class="t-s" x="96" y="196" text-anchor="middle">AI Factory 19</text>
+<path class="ln" d="M172,182 H236"></path>
+<rect class="box" x="236" y="160" width="180" height="44" rx="2"></rect>
+<text class="t-s" x="326" y="186" text-anchor="middle">RAISE 조정 레이어</text>
+<path class="ln" d="M416,182 H480"></path>
+<rect class="box" x="480" y="160" width="220" height="44" rx="2"></rect>
+<text class="t-s" x="590" y="186" text-anchor="middle">법인 아님 · 파일럿 단계</text>
+
+<rect class="box" x="20" y="218" width="152" height="44" rx="2"></rect>
+<text class="t" x="96" y="238" text-anchor="middle" style="font-weight:600">日 · 프로그램</text>
+<text class="t-s" x="96" y="254" text-anchor="middle">방침 → 예산계정</text>
+<path class="ln" d="M172,240 H236"></path>
+<rect class="box" x="236" y="218" width="180" height="44" rx="2"></rect>
+<text class="t-s" x="326" y="244" text-anchor="middle">공모 → 초과수요 확인</text>
+<path class="ln" d="M416,240 H480"></path>
+<rect class="box" x="480" y="218" width="220" height="44" rx="2"></rect>
+<text class="t-s" x="590" y="244" text-anchor="middle">6개월 만에 6.7배 증액</text>
+
+<rect class="box-b" x="736" y="44" width="244" height="218" rx="2"></rect>
+<text class="t" x="858" y="76" text-anchor="middle" style="font-weight:600">韓 · 결집형 지향</text>
+<text class="t-s" x="858" y="104" text-anchor="middle">전략(’25.11) → NAIS(’26.5)</text>
+<text class="t-s" x="858" y="124" text-anchor="middle">→ 통합플랫폼 설계</text>
+<text class="t-s" x="858" y="156" text-anchor="middle" style="fill:var(--kr);font-weight:600">비어 있는 칸</text>
+<text class="t-s" x="858" y="180" text-anchor="middle">결집 범위 · 강제 근거</text>
+<text class="t-s" x="858" y="200" text-anchor="middle">미션의 예산 권한</text>
+<text class="t-s" x="858" y="220" text-anchor="middle">가동 중인 플랫폼</text>
+<text class="t-s" x="858" y="248" text-anchor="middle" style="fill:var(--ink-3)">인력 약 20명 · 플랫폼 미가동</text>
+</svg>
+</div>
+<figcaption><b>그림.</b> 네 나라는 같은 목표를 다른 순서로 채웠다. 韓은 美와 같은 결집형을 택했고 전략·조직·설계까지 갖췄으나, <b>결집 범위와 강제 근거, 미션의 예산 권한이 비어 있다</b>. 美도 플랫폼 실물은 미완성이므로 격차는 진도가 아니라 설계에 있다.</figcaption>
+</figure>
+
+<p class="tnote">※ 인용 시 유의 — 네 나라 모두 <b>발표액과 집행액의 층위가 다르다.</b> 美 ‘50억 달러’는 15개 부처 합산 약정치이고, 韓 ‘GPU 26만 장’은 ’30년까지의 목표치다. 中 산력은 FP16, 超算<span class="rd">(초산)</span> 성능은 FP64 기준이라 병렬 인용할 수 없다.</p>
+</section>
+
+<button class="nextbar" id="go" type="button">
+<span>상세 보고서 보기 — 국가별 인프라 현황 · 구조 대비 · 재원 구조 · 시사점 · 대응방향 · 쟁점</span>
+<span class="arrow">→</span>
+</button>
+
+</div>
+
+<div id="doc">
+<div class="topbar">
+<button class="backbtn" id="back" type="button">← 요약</button>
+<span class="ttl">주요국 AI4S 연구인프라 경쟁 · 본문</span>
+</div>
+
+
+<section>
+  <div class="eyebrow">1. 국가별 인프라 현황</div>
+  <p>각국 인프라를 계산·데이터·실험·거버넌스 네 축으로 정리하고, 절마다 한국과의 대비를 붙였다. 수치는 발표 시점과 측정 기준이 다르므로 그대로 병기했다.</p>
+  <h3><span class="cty c-us">美</span> 1.1 자산은 최대, 플랫폼은 미완성</h3>
+  <p><strong>계산</strong> : TOP500 2위 El Capitan 1,809PF, 3위 Frontier 1,353PF, 4위 Aurora 1,012PF다. ’25.10.30 신규 9기를 발표했고 주요 4기는 Solstice(ANL, Blackwell 10만 GPU)·Equinox(ANL, 1만)·Lux(ORNL, AMD MI355X)·Doudna(LBNL)다.<a class="src p" href="https://top500.org/lists/top500/2026/06/">TOP500 6월</a><a class="src p" href="https://www.alcf.anl.gov/news/argonne-expands-nation-s-ai-infrastructure-powerful-new-supercomputers-and-public-private">ALCF</a></p>
+  <ul class="sub">
+    <li>4기 모두 <strong>정식 가동 발표가 없다</strong> — ORNL 시스템 페이지는 ’26.9.3 갱신본에서도 “will be deployed”를 유지한다.<a class="src p" href="https://www.olcf.ornl.gov/olcf-resources/compute-systems/lux/">OLCF Lux</a></li>
+    <li>Lux는 연 350만 노드-시간 중 <strong>50%를 제네시스 전용</strong>으로, 나머지 50%를 유상 상업 이용으로 명문화했다.<a class="src p" href="https://www.olcf.ornl.gov/olcf-resources/compute-systems/lux/">OLCF Lux</a></li>
+  </ul>
+  <p><strong>플랫폼</strong> : Genesis Mission ⊃ ASSP ⊃ AmSC(클라우드) + ModCon(모델) 계층이다. AmSC는 ORNL 주도이고 ESnet이 공동 수행기관이다.<a class="src p" href="https://www.es.net/news-and-publications/esnet-news/2026/q-and-a-how-the-genesis-missions-american-science-cloud-advances-innovation/">ESnet 7/17</a></p>
+  <ul class="sub">
+    <li>공식 제품 카탈로그 12종 중 <strong>최상위 등급 Graduated(정식 서비스)가 0종</strong>이고, 도달한 최고 등급은 <strong>Candidate 2종</strong>(모델접근게이트웨이 MAG, 연합인증 SSO)이다. 나머지는 Incubator 9종·미정 1종이다. 이용은 <strong>MAG 접근을 승인받은 RFA 1단계 팀</strong>에 한정되고, 최소기능제품 기한은 ’26.9.30이다.<a class="src p" href="https://amsc.energy.gov/product-catalog/">AmSC 카탈로그</a><a class="src p" href="https://docs.amsc.energy.gov/model-access-gateway">AmSC 문서</a></li>
+    <li>MAG는 OpenAI 호환 API로 <strong>상용 프런티어 모델을 국립연구소 연구자에게 중개</strong>한다 — Claude·GPT-5 계열과 함께 Llama·Mistral·gpt-oss 등 공개가중치 모델도 제공한다.<a class="src p" href="https://docs.amsc.energy.gov/model-access-gateway">AmSC 문서</a></li>
+  </ul>
+  <p><strong>데이터</strong> : 15개 부처 자산을 결집한다. 선정팀은 데이터·모델·산출물을 메타데이터와 함께 플랫폼에 등재하고 개방할 의무를 지며, 데이터관리·공유계획이 협약 필수서류다.<a class="src p" href="https://www.whitehouse.gov/releases/2026/07/45502/">백악관 7/22</a><a class="src p" href="https://science.osti.gov/-/media/grants/pdf/foas/2026/DE-FOA-0003612-000003.pdf">RFA 원문</a></p>
+  <h3><span class="cty c-eu">EU</span> 1.2 시설은 늘었으나 조정 레이어가 비어 있다</h3>
+  <p><strong>계산</strong> : JUPITER Booster(율리히)가 정확히 1,000.00PF로 세계 5위이자 유럽 최초 엑사스케일이다. LUMI 11위 379.7PF, Leonardo 12위 241.2PF, MareNostrum 5 16위 175.3PF가 뒤를 잇는다.<a class="src p" href="https://top500.org/lists/top500/2026/06/">TOP500 6월</a></p>
+  <p><strong>시설 확충</strong> : AI Factory <strong>19개소·16개 회원국</strong>에 안테나 13개소를 더했다. 안테나에는 영국·스위스·세르비아·몰도바·북마케도니아 등 <strong>비EU국이 포함</strong>된다.<a class="src p" href="https://www.eurohpc-ju.europa.eu/eurohpc-ju-selects-ai-factory-antennas-broaden-ai-factories-initiative-2025-10-13_en">EuroHPC 안테나</a></p>
+  <p><strong>기가팩토리</strong> : 누가 얼마를 댈지를 규정 조문(제12b조 5항)에 못박았다. <strong>EU가 건설비(CAPEX)의 최대 17%</strong>를 대고 <strong>회원국이 최소 그만큼을 더</strong> 낸다. 남는 건설비와 운영비는 전부 민간 컨소시엄 몫이어서 <strong>공공은 3분의 1 안팎에서 멈춘다</strong>. 공모 마감은 ’26.11.12, 선정은 ’27년 초이므로 <strong>아직 선정지가 없다</strong>.<a class="src p" href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202600150">규정 2026/150</a><a class="src p" href="https://www.eurohpc-ju.europa.eu/eurohpc-joint-undertaking-launches-ai-gigafactories-call-2026-07-30_en">기가팩토리 공모</a></p>
+  <p><strong>조정 레이어</strong> : RAISE는 법인이 아닌 <strong>가상연구소</strong>이며 예산은 ’25년 작업계획 €33M에 ’26-27년 €107M이다. ’25.11 출범했으나 아직 <strong>파일럿 단계</strong>이고, 과학자문위원회는 ’26.6 전문가 모집 공고 단계에 머물러 있다.<a class="src p" href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-ai-science-strategy/raise-resource-ai-science-europe_en">EC RAISE</a><a class="src p" href="https://hadea.ec.europa.eu/calls-proposals/thematic-networks-excellence-ai-science_en">HaDEA</a></p>
+  <h3><span class="cty c-cn">中</span> 1.3 규모는 압도적, 정밀도 문제로 CPU 우회 중</h3>
+  <p><strong>초고성능계산</strong> : TOP500 1위 LineShine은 深圳<span class="rd">(선전)</span> 국가슈퍼컴센터 소재로 FP64 2,198PF다. 자체설계 304코어 프로세서 1,379만 코어에 LingQi 독자 인터커넥트와 Kylin OS를 쓰며 <strong>가속기를 탑재하지 않았다</strong>.<a class="src p" href="https://top500.org/news/lineshine-debuts-no-1-top500-enters-new-global-exascale-era/">TOP500</a></p>
+  <p><strong>지능형계산</strong> : 공신부(工信部)가 반년 사이 두 번 발표했다. ’26.1 발표는 <strong>1,590EF 초과·万卡<span class="rd">(만카)</span>급 클러스터 42개</strong>(’25년 말 기준), ’26.7 발표는 <strong>2,185EF</strong>(’26.6말 기준, FP16, 전년비 +177%)다. 8대 허브와 3개 산전협동구가 전국의 85% 이상을 점한다.<a class="src" href="https://www.news.cn/tech/20260720/63025e398f234092b9876272271417fb/c.html">신화망 7/20</a></p>
+  <ul class="sub">
+    <li>智算<span class="rd">(지산)</span>은 FP16, 通算<span class="rd">(통산)</span>은 FP32, 超算<span class="rd">(초산)</span>은 FP64로 <strong>측정 기준이 다르다</strong> — 자료 간 8~10배 차이는 여기서 온다. 병렬 인용을 피해야 한다.<a class="src p" href="https://www.caict.ac.cn/kxyj/qwfb/bps/202603/P020260306392232241580.pdf">信通院<span class="rd">(신통원)</span> 블루북</a></li>
+  </ul>
+  <p><strong>국산화</strong> : 중국과학원 磐石<span class="rd">(반석)</span> 2.0이 昇腾<span class="rd">(성텅)</span>·海光<span class="rd">(하이광)</span> 국산칩에 적응했다. 다만 <strong>Ascend 910 계열은 네이티브 FP64 텐서 가속이 없어</strong> 수치 민감 단계를 호스트 CPU로 넘기는 이기종 분할이 전제된다.<a class="src" href="https://www.cas.cn/yx/202607/t20260721_5115936.shtml">CAS 7/21</a><a class="src p" href="https://arxiv.org/html/2607.20120">鹏城实验室<span class="rd">(펑청실험실)</span></a></p>
+  <p><strong>데이터</strong> : 고품질 데이터셋이 <strong>11만 개·908PB</strong>로 늘었다(전년비 각각 +61.1%·+142.6%). 국가데이터국 실시방안은 중점영역 1순위를 ‘科学研究<span class="rd">(과학연구)</span>’로 지정했다.<a class="src p" href="https://www.nda.gov.cn/sjj/swdt/xwfb/0429/20260429164803571173880_pc.html">국가데이터국</a><a class="src p" href="https://www.nda.gov.cn/sjj/zwgk/tzgg/0608/20260608172117399715004_pc.html">실시방안 6/3</a></p>
+  <h3><span class="cty c-jp">日</span> 1.4 규모는 중위, 체인은 가장 완성도가 높다</h3>
+  <p><strong>계산</strong> : 후가쿠 442PF로 세계 9위다. 후가쿠NEXT는 기본설계 기술보고서를 공개했고(’26.5.29) 2030년경 가동을 목표로 하며, <strong>AI 실효 50EFLOPS 이상</strong>·기존 HPC 앱 <strong>5~10배 이상</strong>, 시뮬레이션과 AI를 융합하면 종합 수십 배를 노린다.<a class="src p" href="https://top500.org/lists/top500/2026/06/">TOP500 6월</a><a class="src p" href="https://www.r-ccs.riken.jp/outreach/topics/20260529-1/index.html">R-CCS</a></p>
+  <p><strong>예산</strong> : ’27년도 개산요구에서 AI for Science 총괄 <strong>3,789억 엔</strong>을 요구했다(전년 563억 엔). 이 가운데 <strong>차세대 연구인프라 구축이 1,711억 엔</strong>(전년 427억 엔)으로 전체의 45%를 차지한다 — 계산기반 환경정비 495억 엔, 분야별 DB 고도화 399억 엔, 후가쿠NEXT 279억 엔, 후가쿠·HPCI 운영 208억 엔, AI 에이전트 파이프라인 76억 엔, SINET 472억 엔의 내수다.<a class="src p" href="https://www.mext.go.jp/content/20260825-ope_dev02-000051779-8.pdf">MEXT 개산요구</a></p>
+  <p><strong>데이터·실험</strong> : NII GakuNin RDM과 SPring-8 실험데이터 연계가 ’26.6.15 시작됐고 J-PARC·NanoTerasu로 확대될 예정이다. 자동화·클라우드 실험실 1호 거점은 분자과학연구소다.<a class="src p" href="https://www.nii.ac.jp/news/release/2026/0615.html">NII</a><a class="src p" href="https://www.mext.go.jp/b_menu/boshu/detail/mext_00538.html">MEXT 채택</a></p>
+  <p><strong>거버넌스</strong> : MEXT가 연구용(후가쿠·HPCI·AI4S 계산기반), METI가 산업용(ABCI·GENIAC)을 맡아 <strong>부처·재원·공모가 분리</strong>돼 있다.</p>
+  <h3><span class="cty c-kr">韓</span> 1.5 조각은 갖췄고 연결이 남았다</h3>
+  <p><strong>계산</strong> : 국가 슈퍼컴퓨터 6호기 「한강」은 600PF에 NVIDIA GH200 8,496장, <strong>총사업비 4,483억 원</strong>이다(GPU 값이 올라 2,929억 원에서 늘었다). ’26년 상반기 구축 목표였으나 “연내”로 밀렸고 <strong>정식 가동 발표는 아직 없다</strong>.<a class="src" href="https://www.mt.co.kr/tech/2026/01/01/2026010114192716263">머니투데이</a><a class="src" href="https://biz.heraldcorp.com/article/10739946">헤럴드경제</a></p>
+  <ul class="sub">
+    <li>자원 배분 기준이 두 갈래로 남아 있다. 예타 계획은 <strong>기초·원천 40%·공공현안 20%·산업 20%</strong>로 나눴고(일부는 기업 유료), ’24.11 국가초고성능컴퓨팅위원회는 <strong>전체의 30%를 AI에 할당</strong>한다고 했다. <strong>분야별 몫과 AI 몫은 서로 다른 축</strong>이라 겹쳐 읽으면 안 되는데, 둘을 한 표로 함께 제시한 정부 원문은 확인되지 않는다.<a class="src p" href="https://www.korea.kr/briefing/policyBriefingView.do?newsId=156688872">부처 브리핑</a></li>
+  </ul>
+  <p><strong>신규 인프라</strong> : 국가AI컴퓨팅센터가 '26.8.3 해남 솔라시도에서 착공했다. 총사업비 2.5조 원, '28년까지 첨단 AI반도체 1.5만 장, '27년 선행서비스다. SPC 출자 4,000억 원 중 공공 몫은 1,160억 원(지분 29%)이다. 센터의 'R&amp;D 구역'은 국산 AI반도체의 설계·시제품 검증장이지 연구자에게 배정되는 계산 몫이 아니다 — 과학연구용 배분 트랙은 여전히 비어 있다.<a class="src p" href="https://www.korea.kr/news/policyNewsView.do?newsId=148965259">정책브리핑</a></p>
+  <p><strong>GPU 조달</strong> : ’25년 1.3만 장을 확보했고, ’26년 목표 1.5만 장 대비 <strong>계약 확정은 9,704장</strong>이다(베라루빈 2,016 + B300 7,688). 과학기술 AI 전용으로는 8,000장 이상을 배정한다.<a class="src" href="https://zdnet.co.kr/view/?no=20260608163939">ZDNet 6/8</a><a class="src p" href="https://aikorea.go.kr/web/board/brdDetail.do?menu_cd=000012&num=91">과학기술×AI 국가전략</a></p>
+  <p><strong>결집 조직</strong> : NAIS가 ’26.5 <strong>NST 내부 조직</strong>으로 업무를 개시했다(세종 소재, 인력 약 20명). <strong>통합플랫폼은 아직 미가동</strong>이다. 별도 법인이 아니며, ‘부설연구소·정원 46명’은 ’25년 계획 단계의 표현이다.<a class="src p" href="https://nais.re.kr/">NAIS</a><a class="src" href="https://zdnet.co.kr/view/?no=20260112104456">ZDNet 1/12</a></p>
+  <p><strong>데이터·실험</strong> : 국가연구데이터법이 법률 제21756호로 ’26.6.9 공포돼 <strong>’27.6.10 시행</strong>된다. DMP 제출 의무(제17조), 국가연구데이터센터 지정(제10조), 공개 원칙을 담았다. 자율실험실 산·학·연 협의체는 ’26.8.11 80개 기관·3개 분과로 출범했고 NAIS가 공동간사다.<a class="src p" href="https://www.law.go.kr/lsInfoP.do?lsiSeq=286701&viewCls=lsRvsDocInfoR">국가법령정보센터</a><a class="src" href="https://zdnet.co.kr/view/?no=20260811095548">ZDNet 8/11</a></p>
+  <h3>1.6 인프라 4축 비교</h3>
+  <div class="tblwrap"><table>
+    <thead><tr><th>축</th><th>美</th><th>EU</th><th>中</th><th>日</th><th>韓</th></tr></thead>
+    <tbody>
+      <tr><td><strong>최고성능 계산자원</strong></td><td>El Capitan 1,809PF
+신규 4기 가동 발표 없음</td><td>JUPITER 1,000.00PF
+(세계 5위)</td><td>LineShine 2,198PF
+세계 1위·가속기 미탑재</td><td>후가쿠 442PF(9위)
+→ 후가쿠NEXT(’30)</td><td class="kr">6호기 「한강」 600PF
+GH200 8,496장
+정식가동 발표 없음</td></tr>
+      <tr><td><strong>AI 전용 계산자원</strong></td><td>Solstice Blackwell 10만
+Equinox Blackwell 1만</td><td>AI Factory 19개소
++안테나 13개소</td><td>智算<span class="rd">(지산)</span> 2,185EF(FP16, ’26.6말)
+万卡<span class="rd">(만카)</span>급 클러스터 42개(’25말)</td><td>ABCI 3.0 H200 6,128장
+(산업용·METI 소관)</td><td class="kr">AI컴퓨팅센터 1.5만장(’28)
+과기AI 전용 8천장</td></tr>
+      <tr><td><strong>연구데이터</strong></td><td>15개 부처 결집
+선정팀 등재·개방 의무</td><td>EOSC 협력
+COM(2025)724에 명문화</td><td>고품질 데이터셋
+11만 개·908PB</td><td>NII RDM ↔ SPring-8
+연계(’26.6.15)</td><td class="kr">국가연구데이터법
+’27.6.10 시행
+DMP 의무(제17조)</td></tr>
+      <tr><td><strong>자율실험</strong></td><td>챌린지에 포함
+로보틱스 14개 과제</td><td>명시적 항목 없음</td><td>베이징 「AI科研 18조」
+자율실험실 체계</td><td>1호 거점 확정
+(분자과학연구소)</td><td class="kr">산·학·연 협의체 출범80개 기관 (’26.8.11)</td></tr>
+      <tr><td><strong>결집 거버넌스</strong></td><td>ASSP(ORNL 주도)
+제품 12종 </td><td>RAISE(법인 아님)
+파일럿 단계</td><td>국가급 문건 미발표
+지방(베이징) 선행</td><td>별도 결집조직 없음
+MEXT 직접 사업</td><td class="kr">NAIS(NST 내부 조직)
+인력 약 20명
+통합플랫폼 미가동</td></tr>
+      <tr><td><strong>결집 대상 범위</strong></td><td>계산·데이터·실험시설
+(물리적 자산 포함)</td><td>계산·데이터
+(EOSC 연계 명문화)</td><td>산력·데이터·모델</td><td>계산·데이터·실험</td><td class="kr">데이터·컴퓨팅·AI모델 등</td></tr>
+    </tbody></table></div>
+  <p class="tnote">※ 中 산력은 FP16, 超算<span class="rd">(초산)</span> 성능은 FP64 기준. 발표 시점이 달라 단순 비교에 주의가 필요하다.</p>
+</section>
+
+<section>
+  <div class="eyebrow">2. 구조 대비</div>
+  <h2>ASSP와 NAIS</h2>
+  <p>韓이 결집형을 택했다는 판단은 정부 문안에 근거한다. NAIS는 <strong>“과학AI 자원 통합 플랫폼과 연구협력 허브”</strong>로 규정됐고, 학습데이터·컴퓨팅·AI 모델을 연결·결집한다고 명시됐다. 목적 진술은 ASSP와 기능적으로 같다. 다른 것은 <strong>결집의 강도</strong>다.<a class="src p" href="https://www.korea.kr/news/policyNewsView.do?newsId=148965259">정책브리핑</a></p>
+<figure>
+<div class="figbody">
+<svg aria-label="미국 ASSP는 법률 근거 위에서 계산 데이터 실험시설을 통합하고 선정팀에 등재 개방 의무를 부과하는 반면, 한국 NAIS는 전략 문서 위에서 데이터 GPU 모델 자율실험실만을 배정과 개방 방식으로 연결하며 자산 제공 의무 규정이 없다는 대비도" class="dg" role="img" viewbox="0 0 1000 240">
+<text class="t-hd" x="20" y="24">美 · ASSP</text>
+<rect class="box-a" height="40" rx="2" width="440" x="20" y="38"></rect>
+<text class="t" style="font-weight:600" text-anchor="middle" x="240" y="63">법률 — OBBB법 §50404가 클라우드를 정의</text>
+<path class="ln-a" d="M240,78 V100"></path>
+<rect class="box" height="52" rx="2" width="440" x="20" y="100"></rect>
+<text class="t-s" text-anchor="middle" x="240" y="122">결집 대상 : 계산 · 데이터 · 실험시설(물리적 자산 포함)</text>
+<text class="t-s" text-anchor="middle" x="240" y="142">17개 국립연구소 · 28개 이용자시설 네트워크</text>
+<path class="ln-a" d="M240,152 V174"></path>
+<rect class="box-a" height="52" rx="2" width="440" x="20" y="174"></rect>
+<text class="t" style="font-weight:600" text-anchor="middle" x="240" y="196">강제 수단 — 과제 선정 조건</text>
+<text class="t-s" text-anchor="middle" x="240" y="216">플랫폼 등재·개방 의무 · 데이터관리계획 협약 필수</text>
+<text class="t-hd" x="540" y="24">韓 · NAIS</text>
+<rect class="box-b" height="40" rx="2" width="440" x="540" y="38"></rect>
+<text class="t" style="font-weight:600" text-anchor="middle" x="760" y="63">전략 — 과학기술×AI 국가전략 · K-문샷</text>
+<path class="ln-b" d="M760,78 V100"></path>
+<rect class="box" height="52" rx="2" width="440" x="540" y="100"></rect>
+<text class="t-s" text-anchor="middle" x="760" y="122">결집 대상 : 데이터 · GPU · AI모델 · 자율실험실 4종</text>
+<text class="t-s" text-anchor="middle" x="760" y="142">23개 출연연 · 4대 과기원 · 직할연구기관</text>
+<path class="ln-b dash" d="M760,152 V174"></path>
+<rect class="box" height="52" rx="2" width="440" x="540" y="174"></rect>
+<text class="t" style="fill:var(--kr);font-weight:600" text-anchor="middle" x="760" y="196">강제 수단 — 확인되지 않음</text>
+<text class="t-s" text-anchor="middle" x="760" y="216">배정 · 개방 · 연결 방식 · 자산 제공 의무 규정 미확인</text>
+</svg>
+</div>
+<figcaption><b>그림 2.</b> 두 플랫폼은 목적과 거버넌스 형태가 같은 계열이다. 갈리는 지점은 세 곳 — <b>근거의 층위(법률 대 전략), 결집 범위(물리적 시설 포함 여부), 강제 수단(과제 선정 조건 대 미확인)</b>이다. 美도 플랫폼 실물은 미완성이므로 격차는 진도가 아니라 설계에 있다.</figcaption>
+</figure>
+</section>
+
+<section>
+  <div class="eyebrow">3. 재원 구조</div>
+  <h2>층위 상이</h2>
+  <p>네 나라 모두 발표액과 집행액의 층위가 다르다. 인용할 때는 성격별로 분해해야 한다.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>국가</th><th>층위</th><th>금액</th><th>성격</th></tr></thead>
+    <tbody>
+      <tr><td>美</td><td><strong>공고문 명시</strong></td><td>AmSC $4천만(최대 $7.5천만)
+ModCon $3천만
+RFA $2억 9,376만</td><td>기존 세출 재배분<a class="src p" href="https://science.osti.gov/grants/Lab-Announcements/-/media/grants/pdf/lab-announcements/2025/LAB-25-3555.pdf">LAB 25-3555</a></td></tr>
+      <tr><td>美</td><td>약정</td><td>연방 $50억+ / 민간 $8억+</td><td>15개 부처 합산 약정 및 현물(계산 크레딧·모델 접근권) 혼재<a class="src p" href="https://www.whitehouse.gov/releases/2026/07/45502/">백악관</a></td></tr>
+      <tr><td>美</td><td>요구·미승인</td><td>AI·양자국 $12억</td><td>하원 세출위 보고서에 언급 없음. 재원도 신규 세출이 아니라 인프라법 수소허브 잔액 전용 제안<a class="src p" href="https://www.everycrsreport.com/reports/R48944.html">CRS R48944</a></td></tr>
+      <tr><td>EU</td><td>RAISE</td><td>€0.33억 + €1.07억</td><td>Horizon Europe 재배치, 신규 재원 아님<a class="src p" href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-ai-science-strategy/raise-resource-ai-science-europe_en">EC RAISE</a></td></tr>
+      <tr><td>EU</td><td>기가팩토리</td><td>EU 최대 CAPEX 17%
+회원국 최소 동액 매칭</td><td>공공 3분의 1, 민간 3분의 2 이상. 절대금액 상한 없음<a class="src p" href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202600150">규정 2026/150</a></td></tr>
+      <tr><td>日</td><td><strong>전용 계정</strong></td><td>’27년 요구 3,789억 엔
+(전년 563억 엔)</td><td>독립 계정 + 기금(복수년 집행)<a class="src p" href="https://www.mext.go.jp/content/20260825-ope_dev02-000051779-8.pdf">MEXT</a></td></tr>
+      <tr class="krrow"><td>韓</td><td><strong>예산분야</strong></td><td>「과학기술×AI」
+(AX 전면화 1조 8,611억 원 내)
+NAIS 운영비 400억 → 618억 원
+AI 기반 바이오데이터·소재
+통합분석 578억 원(신규)</td><td><strong>예산분야로는 존재한다.</strong> 「2027년도 국가연구개발 투자방향 및 기준(안)」에 “과학기술xAI로 국가 과학난제를 해결하는 ‘K-문샷’ 추진”이 명시돼 있다<a class="src p" href="https://www.bioin.or.kr/board/agenda/333162">투자방향(안)</a><a class="src" href="https://www.ajunews.com/view/20260901100704346">아주경제 9/1</a></td></tr>
+      <tr class="krrow"><td>韓</td><td>미션(K-문샷)</td><td>’26년 약 4,000억 원 → ’27년 약 5,000억 원
+출연연 전략연구사업 우선배분
++ 부처 기존사업 편입</td><td><strong>회계 단위는 아니다.</strong> 「K-문샷」이라는 세부사업은 예산 문서에서 확인되지 않고, <strong>PD도 예산 조정 권한 없이 기획·조정만 맡는다. 과기정통부는 혁신법을 고쳐 PD의 인사·예산 권한에 근거를 만들겠다고 밝혔다</strong><a class="src" href="https://www.mt.co.kr/tech/2026/07/02/2026070210275523528">머니투데이 7/2</a><a class="src" href="https://www.hellodd.com/news/articleView.html?idxno=110944">헬로디디</a></td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <div class="eyebrow">4. 국가별 시사점</div>
+  <h2>네 나라에서 각각 무엇을 읽을 것인가</h2>
+  <h3><span class="cty c-us">美</span> 4.1 법률·의무·분리</h3>
+  <p><strong>플랫폼을 법률로 정의했다.</strong> OBBB법 §50404가 클라우드를 정의하고 그 아래에서 공고와 수권이 나왔다. 행정명령은 위에 얹힌 것이지 출발점이 아니다.<a class="src p" href="https://science.osti.gov/grants/Lab-Announcements/-/media/grants/pdf/lab-announcements/2025/LAB-25-3555.pdf">LAB 25-3555</a></p>
+  <p><strong>과제 선정 조건에 등재·개방 의무를 걸었다.</strong> 선정팀은 데이터·모델·산출물을 플랫폼에 등재하고 개방해야 하며, 데이터관리·공유계획이 협약 필수서류다.<a class="src p" href="https://science.osti.gov/-/media/grants/pdf/foas/2026/DE-FOA-0003612-000003.pdf">RFA 원문</a></p>
+  <p><strong>과제 선정과 자원 배분을 분리했다.</strong> 신청 시 계산 소요를 받되 자원 배정 신청으로 간주하지 않고, 선정 이후 별도 절차로 배분한다.<a class="src p" href="https://science.osti.gov/-/media/grants/pdf/foas/2026/DE-FOA-0003612-000003.pdf">RFA 원문</a></p>
+  <p><strong>단계별 선별 구조는 짰으나, 통과율은 아직 나오지 않았다.</strong> 1단계 9개월·50~75만 달러 → 판정 → 2단계 3년·600~1,500만 달러 구조다. DOE 사상 최대 응답 속에 278건이 선정됐으나 <strong>2단계 확정은 아직 1건</strong>(Prometheus, 아이다호국립연 주도)이고 나머지는 ’26년 가을 발표 예정이다 — <strong>1단계 278건 중 몇 건이 2단계로 가는지가 이 구조의 실효를 가른다.</strong><a class="src p" href="https://science.osti.gov/-/media/grants/pdf/foas/2026/DE-FOA-0003612-000003.pdf">RFA 원문</a><a class="src" href="https://fedscoop.com/energy-department-demo-genesis-mission-platform-rfa-awards/">FedScoop</a></p>
+  <h3><span class="cty c-jp">日</span> 4.2 계정과 수요 입증</h3>
+  <p><strong>전용 예산계정을 세웠다.</strong> 방침(’26.3) → 추경 370억 엔 → 공모 개시(5월) → 개산요구 3,789억 엔(8월)의 체인을 <strong>6개월 만에 완주</strong>했다.<a class="src p" href="https://www.mext.go.jp/content/20260825-ope_dev02-000051779-8.pdf">MEXT 개산요구</a></p>
+  <p><strong>소액·대량 공모가 수요를 드러내는 장치였다.</strong> SPReAD는 1건 500만 엔 이하·연 2회 공모로 2차에만 17,914건을 접수했고 채택률은 3% 내외다. 이 <strong>초과수요가 6.7배 증액의 논거</strong>가 됐다.<a class="src p" href="https://www.mext.go.jp/content/20260807-mxt_jyohoka01-000051488_001.pdf">SPReAD 2차</a></p>
+  <p><strong>연구용과 산업용을 부처 단위로 분리했다.</strong> MEXT가 연구용, METI가 산업용을 맡아 재원과 공모가 겹치지 않는다.</p>
+  <h3><span class="cty c-eu">EU</span> 4.3 조정 레이어의 한계와 민간 레버리지</h3>
+  <p><strong>조정 레이어만 얹어서는 실체가 더디다.</strong> RAISE는 법인이 아닌 가상연구소여서 ’25.11 출범 뒤에도 파일럿 단계에 머물러 있고, 과학자문위원회조차 아직 꾸려지지 않았다.<a class="src p" href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-ai-science-strategy/raise-resource-ai-science-europe_en">EC RAISE</a></p>
+  <p><strong>공공이 낼 수 있는 상한을 법으로 정했다.</strong> EU 17% + 회원국 최소 동액까지만 공공이 대고, 나머지 건설비와 운영비 전부를 민간이 지도록 규정 조문이 강제한다.<a class="src p" href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202600150">규정 2026/150</a></p>
+  <h3><span class="cty c-cn">中</span> 4.4 정밀도 이원구조와 지역 선행</h3>
+  <p><strong>과학계산은 AI 가속기만으로 되지 않는다.</strong> TOP500 1위를 가속기 없는 CPU 전용 시스템으로 달성했고, 국산 NPU는 FP64 텐서 가속이 없어 CPU와의 이기종 분할을 전제로 한다.<a class="src p" href="https://arxiv.org/html/2607.20120">鹏城实验室<span class="rd">(펑청실험실)</span></a></p>
+  <p><strong>국가급 문건 없이도 지방이 먼저 움직였다.</strong> 「AI+科学技术<span class="rd">(AI+과학기술)</span>」 국가급 실시문건이 미발표인 상태에서 베이징시가 「AI科研 18조」로 자율실험실·과학데이터센터·전용 산력집군을 선행 추진한다.<a class="src p" href="https://kw.beijing.gov.cn/zwgk/zcwj/202607/t20260701_4742694.html">베이징시</a></p>
+  <p><strong>데이터를 병목이자 초점으로 잡았다.</strong> 국가데이터국 실시방안은 산업별 고품질 데이터셋 구축의 중점영역 1순위를 ‘科学研究<span class="rd">(과학연구)</span>’로 지정했다.<a class="src p" href="https://www.nda.gov.cn/sjj/zwgk/tzgg/0608/20260608172117399715004_pc.html">실시방안</a></p>
+</section>
+
+<section>
+  <div class="eyebrow">5. 분야별 대응방향</div>
+  <h2>무엇을 할 것인가</h2>
+  <h3>5.1 · 예산 권한 — 미션에 예산을 움직일 권한을 붙인다</h3>
+  <p>「과학기술×AI」 예산분야는 이미 있다. 없는 것은 계정이 아니라 <strong>미션이 예산을 움직일 권한</strong>이다. 법 개정으로 <strong>① NST를 전문기관으로 지정</strong>하고 <strong>② PD에게 인사·예산 권한을 부여</strong>한 뒤, 「과학기술×AI」 예산분야 안에서 <strong>미션별 배분</strong>한다.</p>
+  <h3>5.2 · 자원 배분 — 연구용 몫과 정밀도 구성을 명문화한다</h3>
+  <p>국가AI컴퓨팅센터의 연구용 배분 비율이 공개되지 않았다. 美 Lu의 <strong>50% 제네시스 미션 전용</strong>(나머지 50%는 유상상업 이용) <strong>명문화</strong>, 日의 <strong>부처 분리(MEXT-연구, METI-산업) </strong>및 <strong>재원·공모</strong> 분리가 연구 수요가 산업 수요와 한풀에서 경쟁하지 않도록 한 점이 참고가 된다. 中 사례에서 알수 있듯이, 과기AI 전용 GPU 8,000장을 배정할때 정밀도별(<strong>FP64와 FP16구분)</strong> 수요를 나눠 잡아야 한다.</p>
+  <h3>5.3 · 데이터 — 의무는 이미 법에 있다. 관건은 시행령이다</h3>
+  <p><strong>등재 의무는 새로 만들 필요가 없다.</strong> ’27.6.10부터 연구개발기관은 보유·관리 중인 국가연구데이터를 <strong>통합플랫폼 또는 전문플랫폼에 등록하거나 연계</strong>해야 한다(제18조). 비공개 대상이라도 <strong>최소한의 식별 정보</strong>는 등록·연계해야 하고, 연구데이터관리계획도 작성·제출해야 한다(제17조).<a class="src p" href="https://www.law.go.kr/lsInfoP.do?lsiSeq=286701&amp;viewCls=lsRvsDocInfoR">국가법령정보센터</a></p>
+  <p>남은 것은 <strong>시행령에서 정할 세 가지</strong>다. 그때까지는 「6대 분야 파운데이션 모델의 학습데이터 공급 경로」를 하위법령에 명시하는 것이 가장 확실한 접속점이며, ’27년 AI 학습데이터 8,000억 원의 일부를 과학데이터 몫으로 배정하면 법과 예산이 처음 연결된다.</p>
+  <h3>5.4 · 수요 입증 — 소액·대량 공모로 잠재수요를 드러낸다</h3>
+  <p>韓에는 <strong>소액·대량 방식과 응모실적</strong>의 공표가 없어 <strong>증액 논거를 만들 수단이 없다</strong>. 日 SPReAD형 공모 사례를 참조하고, 기초연구AI센터를 접수 창구로 활용하는 방법을 생각해볼 수 있다.</p>
+  <h3>5.5 · 국제 협력 — 개방 가능 자산을 먼저 정리한다</h3>
+  <p>美의 공식 파트너는 日 단독이고 데이터 거버넌스는 미결이다. 협상 자산(6호기 「한강」 600PF, KSTAR, 방사광가속기)의 <strong>개방 범위와 조건</strong>을 먼저 정리해야 교섭 카드가 된다.</p>
+</section>
+
+<section>
+  <div class="eyebrow">6. 쟁점</div>
+  <h2>아직 정리되지 않은 이슈들</h2>
+  <div class="tblwrap"><table>
+    <thead><tr><th>쟁점</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td><strong>결집의 강제력</strong></td><td>美는 <strong>과제선정 조건(지원금 수혜)</strong>으로 결집의 문제를 푼 반면, 韓 통합플랫폼은 <strong>배정·개방·연결 방식</strong>임. 참여 출연연에 <strong>제공 의무를 지우는 규정은 확인되지 않는다</strong></td></tr>
+      <tr><td><strong>결집 범위</strong></td><td>韓 정부가 명시한 통합 대상은 "<strong>학습데이터·컴퓨팅·AI 모델 등</strong>" 셋뿐이다. <strong>연구장비·연구시설이 포함되는지는 밝혀져 있지 않다</strong>. 연구장비는 지금 ZEUS(국가연구시설장비 종합정보시스템)라는 별도 등록·공동활용 체계에 있다. 美 AmSC가 <strong>실험시설 연결 기능(IRI 자원 인터페이스)을 필수 요건</strong>으로 못박은 것과 달리, 韓은 <strong>아직 범위가 명확히 정해지지 않았다</strong></td></tr>
+      <tr><td><strong>조직 역량</strong></td><td><strong>NAIS 인력 약 20명·’26년 운영비 400억 원</strong> 규모로 23개 출연연과 4대 과기원의 자산을 <strong>통합 운영할 수 있는지</strong>. 출범 두 달째 <strong>업무공간 확보 문제</strong>도 보도되기도 했다</td></tr>
+    </tbody></table></div>
+</section>
+
+<section>
+  <div class="eyebrow">출처</div>
+  <ul class="sub">
+    <li><strong>美</strong> — Public Law 119-21(OBBB) §50404 / DOE <a class="src-a" href="https://science.osti.gov/grants/Lab-Announcements/-/media/grants/pdf/lab-announcements/2025/LAB-25-3555.pdf" target="_blank" rel="noopener">「LAB 25-3555: ASCR — The American Science Cloud」</a>(’25.8.22)·「LAB 25-3560: ModCon」(’25.8.22)·<a class="src-a" href="https://science.osti.gov/-/media/grants/pdf/foas/2026/DE-FOA-0003612-000003.pdf" target="_blank" rel="noopener">「DE-FOA-0003612 Genesis Mission RFA」</a>(개정3차 ’26.4.20) / 행정명령 14363(’25.11.24) / 백악관 <a class="src-a" href="https://www.whitehouse.gov/releases/2026/07/45502/" target="_blank" rel="noopener">「More Than $5 Billion for the Genesis Mission」</a>(’26.7.22) / <a class="src-a" href="https://amsc.energy.gov/product-catalog/" target="_blank" rel="noopener">amsc.energy.gov 제품 카탈로그</a> · <a class="src-a" href="https://docs.amsc.energy.gov/model-access-gateway" target="_blank" rel="noopener">docs.amsc.energy.gov</a> / ESnet <a class="src-a" href="https://www.es.net/news-and-publications/esnet-news/2026/q-and-a-how-the-genesis-missions-american-science-cloud-advances-innovation/" target="_blank" rel="noopener">「Q&amp;A: AmSC Advances Innovation」</a>(’26.7.17) / <a class="src-a" href="https://www.olcf.ornl.gov/olcf-resources/compute-systems/lux/" target="_blank" rel="noopener">OLCF Lux 시스템 페이지</a>(’26.9.3) / <a class="src-a" href="https://www.alcf.anl.gov/news/argonne-expands-nation-s-ai-infrastructure-powerful-new-supercomputers-and-public-private" target="_blank" rel="noopener">ALCF Solstice·Equinox</a> / <a class="src-a" href="https://www.everycrsreport.com/reports/R48944.html" target="_blank" rel="noopener">CRS R48944</a> / <a class="src-a" href="https://top500.org/lists/top500/2026/06/" target="_blank" rel="noopener">TOP500 June 2026</a> / <a class="src-a" href="https://fedscoop.com/energy-department-demo-genesis-mission-platform-rfa-awards/" target="_blank" rel="noopener">FedScoop</a>(’26.7.22)</li>
+    <li><strong>EU</strong> — European Commission COM(2025)724(’25.10.8) / <a class="src-a" href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202600150" target="_blank" rel="noopener">Council Regulation (EU) 2026/150 제12b조</a>(’26.1.16) / EuroHPC JU <a class="src-a" href="https://www.eurohpc-ju.europa.eu/eurohpc-joint-undertaking-launches-ai-gigafactories-call-2026-07-30_en" target="_blank" rel="noopener">「AI Gigafactories Call」</a>(’26.7.30)·<a class="src-a" href="https://www.eurohpc-ju.europa.eu/eurohpc-ju-selects-ai-factory-antennas-broaden-ai-factories-initiative-2025-10-13_en" target="_blank" rel="noopener">「AI Factory Antennas」</a>(’25.10.13) / <a class="src-a" href="https://hadea.ec.europa.eu/calls-proposals/thematic-networks-excellence-ai-science_en" target="_blank" rel="noopener">HaDEA HORIZON-RAISE-2026-01-01</a></li>
+    <li><strong>中</strong> — 国务院<span class="rd">(국무원)</span> 「关于深入实施‘人工智能+’行动的意见」(’25.8.26) / 国家发展改革委<span class="rd">(국가발전개혁위)</span> 「十五五规划纲要<span class="rd">(15·5 규획강요)</span>」(’26.3) 제13장 专栏10 / 国家数据局<span class="rd">(국가데이터국)</span> <a class="src-a" href="https://www.nda.gov.cn/sjj/zwgk/tzgg/0608/20260608172117399715004_pc.html" target="_blank" rel="noopener">「行业高质量数据集建设行动 实施方案<span class="rd">(행업 고품질 데이터셋 건설행동 실시방안)</span>」</a>(’26.6.3)·<a class="src-a" href="https://www.nda.gov.cn/sjj/swdt/xwfb/0429/20260429164803571173880_pc.html" target="_blank" rel="noopener">「全国数据资源调查报告(2025)」</a> / 北京市<span class="rd">(베이징시)</span> <a class="src-a" href="https://kw.beijing.gov.cn/zwgk/zcwj/202607/t20260701_4742694.html" target="_blank" rel="noopener">「加快推进人工智能赋能科学研究<span class="rd">(과학연구)</span>实施方案(2026—2028)」</a>(’26.6.30) / 中国信通院<span class="rd">(중국 신통원)</span> <a class="src-a" href="https://www.caict.ac.cn/kxyj/qwfb/bps/202603/P020260306392232241580.pdf" target="_blank" rel="noopener">「先进计算暨算力发展指数蓝皮书(2025)」</a> / <a class="src-a" href="https://www.cas.cn/yx/202607/t20260721_5115936.shtml" target="_blank" rel="noopener">中国科学院 磐石<span class="rd">(반석)</span> 2.0</a>(’26.7.17) / <a class="src-a" href="https://arxiv.org/html/2607.20120" target="_blank" rel="noopener">arXiv:2607.20120</a>(鹏城实验室<span class="rd">(펑청실험실)</span>) / <a class="src-a" href="https://www.news.cn/tech/20260720/63025e398f234092b9876272271417fb/c.html" target="_blank" rel="noopener">新华网<span class="rd">(신화망)</span></a></li>
+    <li><strong>日</strong> — 文部科学省 「AI for Science 推進 基本的な戦略方針」(’26.3)·<a class="src-a" href="https://www.mext.go.jp/content/20260825-ope_dev02-000051779-8.pdf" target="_blank" rel="noopener">「令和9年度概算要求 主要事項(研究振興局)」</a>(’26.8.25)·<a class="src-a" href="https://www.mext.go.jp/content/20260807-mxt_jyohoka01-000051488_001.pdf" target="_blank" rel="noopener">「SPReAD 제2회 응모상황」</a>(’26.8.7)·<a class="src-a" href="https://www.mext.go.jp/b_menu/boshu/detail/mext_00538.html" target="_blank" rel="noopener">「大規模集積研究システム 채택기관 결정」</a>(’26.6.9) / JST ARiSE 공모요령 / RIKEN R-CCS <a class="src-a" href="https://www.r-ccs.riken.jp/outreach/topics/20260529-1/index.html" target="_blank" rel="noopener">「富岳NEXT 기본설계 기술보고서」</a>(’26.5.29) / <a class="src-a" href="https://www.nii.ac.jp/news/release/2026/0615.html" target="_blank" rel="noopener">NII GakuNin RDM–SPring-8 연계</a>(’26.6.15)</li>
+    <li><strong>韓</strong> — 국가법령정보센터 <a class="src-a" href="https://www.law.go.kr/lsInfoP.do?lsiSeq=286701&viewCls=lsRvsDocInfoR" target="_blank" rel="noopener">「국가연구데이터 관리 및 활용 촉진에 관한 법률」</a>(법률 제21756호) / 국가인공지능포털 <a class="src-a" href="https://aikorea.go.kr/web/board/brdDetail.do?menu_cd=000012&num=91" target="_blank" rel="noopener">「과학기술×AI 국가전략」</a>(’25.11.24) / 국가AI전략위 통합플랫폼 자료 / 국가과학기술자문회의 <a class="src-a" href="https://www.bioin.or.kr/board/agenda/333162" target="_blank" rel="noopener">「2027년도 국가연구개발 투자방향 및 기준(안)」</a>(’26.3.12) / 과기정통부 「2026년 주요업무 추진계획」(’25.12.12) / <a class="src-a" href="https://www.korea.kr/news/policyNewsView.do?newsId=148965259" target="_blank" rel="noopener">정책브리핑(슈퍼컴 6호기 브리핑·AI컴퓨팅센터 착공·K-문샷 개시)</a> / IRIS 「2026년 AI 기반 대학 과학기술 혁신사업」 공고 / <a class="src-a" href="https://nais.re.kr/" target="_blank" rel="noopener">NAIS(nais.re.kr)</a> / NST 소관기관 현황 / 2027년 예산안 보도(<a class="src-a" href="https://www.ajunews.com/view/20260901100704346" target="_blank" rel="noopener">아주경제</a>·헬로티) / <a class="src-a" href="https://zdnet.co.kr/view/?no=20260608163939" target="_blank" rel="noopener">ZDNet</a>·<a class="src-a" href="https://www.mt.co.kr/tech/2026/07/02/2026070210275523528" target="_blank" rel="noopener">머니투데이</a>·<a class="src-a" href="https://biz.heraldcorp.com/article/10739946" target="_blank" rel="noopener">헤럴드경제</a>·<a class="src-a" href="https://www.hellodd.com/news/articleView.html?idxno=110944" target="_blank" rel="noopener">헬로디디</a>·교수신문</li>
+  </ul>
+</section>
+</div>
+
+</div>
+<script>
+(function(){
+  var cover=document.getElementById('cover'),doc=document.getElementById('doc');
+  var go=document.getElementById('go'),back=document.getElementById('back');
+  if(!cover||!doc||!go||!back)return;          /* 요소가 없으면 한 문서로 둔다 */
+  document.documentElement.className+=' js';    /* 여기서부터 두 화면으로 나뉜다 */
+  function show(v){
+    if(v==='doc'){cover.className+=' off';doc.className+=' on';}
+    else{cover.className=cover.className.replace(/\s*off/,'');
+         doc.className=doc.className.replace(/\s*on/,'');}
+    window.scrollTo(0,0);
+  }
+  go.addEventListener('click',function(){show('doc');});
+  back.addEventListener('click',function(){show('cover');});
+})();
+</script>
+</body>
+</html>
